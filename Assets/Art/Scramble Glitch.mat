@@ -32,10 +32,13 @@ Material:
     - _CenterX: 0.5
     - _DistortionBase: 0.5
     - _DistortionExp: 3
+    - _EdgeSmoothing: 6
     - _EnableExternalAlpha: 0
-    - _Freq: 26.8
+    - _Freq: 20.2
+    - _Step: 16.2
     - _Strength: 1
-    - _Width: 0.059
+    - _Timescale: 5
+    - _Width: 0.282
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}

@@ -12,6 +12,9 @@
 		_Width("Width", Range(0.0, 1.0)) = 0.1
 		_Strength("Strength", Range(0.0, 1.0)) = 1
 		_Freq("Frequency", Range(0.0, 100.0)) = 35
+		_Step("Step", Range(0.0, 100)) = 15
+		_EdgeSmoothing("Edge Smoothing", Range(0.0, 10.0)) = 4
+		_Timescale("Timescale", Range(0.0, 5)) = 1
 		_CenterX("Center", Range(0.0, 1.0)) = 0.5
     }
 
@@ -45,14 +48,20 @@
 			float _Width;
 			float _Strength;
 			float _Freq;
+			float _Step;
+			float _EdgeSmoothing;
+			float _Timescale;
 			float _CenterX;
+
+			float rand(float n){return frac(sin(n) * 43758.5453123);}
 
 			fixed4 frag(v2f IN) : SV_Target
 			{
 				float2 uv = IN.texcoord;
 				float min = _CenterX - (_Width / 2);
 				float max = _CenterX + (_Width / 2);
-				float wave = (sin(uv.y * _Freq) + 1) / 2;
+				float wave = (sin(uv.y * _Freq + _Time.w * _Timescale) + 1) / 2;
+				wave = floor(wave * _Step) / _Step;
 				float dist = (uv.x - min) / _Width;
 				float stretch = 0;
 				if (dist < wave) {
@@ -60,7 +69,7 @@
 				} else {
 					stretch = -pow((1 - dist) / (1 - wave), 2);
 				}
-				//stretch *= 1 - (abs(dist - 0.5) * 2);
+				stretch *= 1 - pow(abs(dist - 0.5) * 2, _EdgeSmoothing);
 				stretch *= _Strength;
 				if (uv.x >= min && uv.x < max) {
 					uv.x += stretch * _Width / 2;
