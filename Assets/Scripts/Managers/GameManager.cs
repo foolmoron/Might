@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : Manager<GameManager> {
 
     [Header("Config")]
     public CreatureData[] Creatures;
@@ -110,11 +110,11 @@ public class GameManager : MonoBehaviour {
         // set new question
         questionOrder.Shuffle();
         currentQuestion = Questions.Next(currentQuestion);
-        QuestionText.text = currentQuestion.Question;
-        Answer1Text.text = currentQuestion.GetAnswer(questionOrder[0]).Text;
-        Answer2Text.text = currentQuestion.GetAnswer(questionOrder[1]).Text;
-        Answer3Text.text = currentQuestion.GetAnswer(questionOrder[2]).Text;
-        Answer4Text.text = currentQuestion.GetAnswer(questionOrder[3]).Text;
+        QuestionText.text = currentQuestion.Question.LineWrap(QuestionLineLength);
+        Answer1Text.text = currentQuestion.GetAnswer(questionOrder[0]).Text.LineWrap(AnswerLineLength);
+        Answer2Text.text = currentQuestion.GetAnswer(questionOrder[1]).Text.LineWrap(AnswerLineLength);
+        Answer3Text.text = currentQuestion.GetAnswer(questionOrder[2]).Text.LineWrap(AnswerLineLength);
+        Answer4Text.text = currentQuestion.GetAnswer(questionOrder[3]).Text.LineWrap(AnswerLineLength);
         QuestionDebug.text = currentQuestion.name;
     }
 }

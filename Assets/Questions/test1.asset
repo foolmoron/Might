@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: test1
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Question: Question 1
+  Question: Question 1 withareallylongwordthatshouldgo around?
   Answer1:
     Text: Answer 1.1
     Score: -1
   Answer2:
-    Text: Answer 1.2
+    Text: Answer 1.2 heresareallylongwordthatshouldwrap correctly
     Score: 0
   Answer3:
     Text: Answer 1.3

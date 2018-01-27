@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: test2
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Question: "Question 2\t"
+  Question: "Question 2\twith a really long question name that should wrap?"
   Answer1:
     Text: Answer 2.1
     Score: 0
   Answer2:
-    Text: Answer 2.2
+    Text: Answer 2.2 long answers that should also wrap around
     Score: 1
   Answer3:
     Text: Answer 2.3
