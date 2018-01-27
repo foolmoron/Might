@@ -11,17 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b686dcc68ec28e4b8ad1dddfc5827c4, type: 3}
   m_Name: test2
   m_EditorClassIdentifier: 
-  Difficulty: 0
-  Question: "Question 2\twith a really long question name that should wrap?"
+  Difficulty: 1
+  Question: Russia borders what two countries?
   Answer1:
-    Text: Answer 2.1
-    Score: 0
-  Answer2:
-    Text: Answer 2.2 long answers that should also wrap around
+    Text: North Korea and Finland
     Score: 1
+  Answer2:
+    Text: Estonia and Moldova
+    Score: -1
   Answer3:
-    Text: Answer 2.3
+    Text: Slovakia and Serbia
     Score: -1
   Answer4:
-    Text: Answer 2.4
-    Score: 0
+    Text: None are correct
+    Score: -1

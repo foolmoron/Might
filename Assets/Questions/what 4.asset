@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b686dcc68ec28e4b8ad1dddfc5827c4, type: 3}
-  m_Name: test3
+  m_Name: what 4
   m_EditorClassIdentifier: 
-  Difficulty: 0
-  Question: What character is from Tolkien's Lord of the Rings?
+  Difficulty: 2
+  Question: The tallest, completed statue in the world depicts _______.
   Answer1:
-    Text: Jonathan Joestar
+    Text: Lady Liberty
     Score: -1
   Answer2:
-    Text: Vicious Victor
-    Score: -1
-  Answer3:
-    Text: Tom Bombadil
+    Text: Vairocana Buddha
     Score: 1
+  Answer3:
+    Text: Jesus Christ
+    Score: -1
   Answer4:
-    Text: Tom Fulp
+    Text: The Motherland
     Score: -1
