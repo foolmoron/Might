@@ -15,8 +15,10 @@ public class GameManager : Manager<GameManager> {
     public int AnswerLineLength = 22;
 
     [Header("RPG Stuff")]
-    public int ScoreRPG;
-    public Text ScoreRPGText;
+    public int HealthRPG = 10;
+    public Text HealthRPGText;
+    public int GoldRPG;
+    public Text GoldRPGText;
     public TextMesh CreatureNameText;
     public TextMesh CreatureResponseText;
     public SpriteRenderer CreatureSprite;
@@ -70,15 +72,19 @@ public class GameManager : Manager<GameManager> {
         var phase = currentCreature.Pattern[currentCreaturePhase];
         if (creatureAction == phase.GoodAction) {
             CreatureResponseText.text = phase.GoodReaction;
-            ScoreRPG++;
+            HealthRPG++;
             currentCreaturePhase++;
         } else if (creatureAction == phase.BadAction) {
             CreatureResponseText.text = phase.BadReaction;
-            ScoreRPG--;
+            HealthRPG--;
             currentCreaturePhase++;
         } else if (creatureAction == CreatureAction.Talk) {
-            ScoreRPG += currentCreature.Dialogues.Count > currentCreatureDialogue 
-                ? currentCreature.Dialogues[currentCreatureDialogue].Score 
+            HealthRPG += currentCreature.Dialogues.Count > currentCreatureDialogue
+                ? currentCreature.Dialogues[currentCreatureDialogue].HealthChange
+                : 0
+                ;
+            GoldRPG += currentCreature.Dialogues.Count > currentCreatureDialogue
+                ? currentCreature.Dialogues[currentCreatureDialogue].GoldChange
                 : 0
                 ;
             CreatureResponseText.text = currentCreature.Dialogues[currentCreatureDialogue].Text;
@@ -96,7 +102,8 @@ public class GameManager : Manager<GameManager> {
 
     public void NewRound() {
         // update texts
-        ScoreRPGText.text = ScoreRPG.ToString();
+        HealthRPGText.text = HealthRPG.ToString();
+        GoldRPGText.text = GoldRPG.ToString();
         ScoreTestText.text = ScoreTest.ToString();
         // set new creature
         if (currentCreature == null || currentCreaturePhase >= currentCreature.Pattern.Count) {

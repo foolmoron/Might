@@ -18,8 +18,10 @@ public class CreaturePhase {
 public class Dialogue {
     [TextArea]
     public string Text = "Hi I am a creature";
-    [Range(-1, 1)]
-    public int Score = 0;
+    [Range(-5, 5)]
+    public int HealthChange = 0;
+    [Range(-500, 500)]
+    public int GoldChange = 0;
 }
 
 [CreateAssetMenu(fileName = "rawr", menuName = "MIGHT/Creature", order = 0)]
