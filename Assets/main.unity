@@ -2331,9 +2331,9 @@ MonoBehaviour:
   QuestionLineLength: 25
   AnswerLineLength: 22
   HealthRPG: 0
-  HealthRPGText: {fileID: 0}
+  HealthRPGText: {fileID: 193943267}
   GoldRPG: 0
-  GoldRPGText: {fileID: 0}
+  GoldRPGText: {fileID: 350452606}
   CreatureNameText: {fileID: 2064740879}
   CreatureResponseText: {fileID: 2141540499}
   CreatureSprite: {fileID: 196195083}
