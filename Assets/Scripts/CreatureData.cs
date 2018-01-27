@@ -3,13 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CreatureAction {
-    Attack,
-    Magic,
-    Defend,
-    Talk,
-}
-
 [Serializable]
 public class CreaturePhase {
     public CreatureAction GoodAction;
@@ -30,7 +23,9 @@ public class Dialogue {
 }
 
 [CreateAssetMenu(fileName = "rawr", menuName = "MIGHT/Creature", order = 0)]
-public class CreatureObject : ScriptableObject {
+public class CreatureData : ScriptableObject {
+    public Difficulty Difficulty;
+    public string Name;
     public Sprite Sprite;
     public List<CreaturePhase> Pattern;
     public List<Dialogue> Dialogues;
