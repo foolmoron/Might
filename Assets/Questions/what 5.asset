@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b686dcc68ec28e4b8ad1dddfc5827c4, type: 3}
+  m_Name: what 5
+  m_EditorClassIdentifier: 
+  Difficulty: 0
+  Question: Dragons are sensitive. What is the best way to approach them?
+  Answer1:
+    Text: Compliment their snout
+    Score: 1
+  Answer2:
+    Text: Show them a trick
+    Score: -1
+  Answer3:
+    Text: Give it a poke
+    Score: -1
+  Answer4:
+    Text: Ignore them
+    Score: -1
