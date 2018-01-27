@@ -2238,13 +2238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb03fbb79689b604dbabb6ff1fdaa321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Creatures:
-  - {fileID: 11400000, guid: 564c5b791d2d7144e8b1d1d960d8a2e3, type: 2}
-  - {fileID: 11400000, guid: 432af6777e31eae40964aaa25a29069a, type: 2}
-  Questions:
-  - {fileID: 11400000, guid: 730cf9ca279d4b144bd7ca9a09ed48f8, type: 2}
-  - {fileID: 11400000, guid: 3110bd97274536e4a9f29b0896c0047e, type: 2}
-  - {fileID: 11400000, guid: 1c7e1ec1aa4d557479570aa18402c915, type: 2}
+  Creatures: []
+  Questions: []
   QuestionLineLength: 25
   AnswerLineLength: 22
   ScoreRPG: 0

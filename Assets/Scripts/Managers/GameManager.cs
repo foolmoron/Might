@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : Manager<GameManager> {
 
     [Header("Config")]
-    public CreatureData[] Creatures;
-    public QuestionData[] Questions;
     [Range(0, 100)]
     public int QuestionLineLength = 25;
     [Range(0, 100)]
@@ -38,8 +39,8 @@ public class GameManager : Manager<GameManager> {
     int[] questionOrder = {1, 2, 3, 4};
 
     void Start() {
-        Creatures.Shuffle();
-        Questions.Shuffle();
+        AssetManager.Inst.Creatures.Shuffle();
+        AssetManager.Inst.Questions.Shuffle();
         NewRound();
     }
 
@@ -99,7 +100,7 @@ public class GameManager : Manager<GameManager> {
         ScoreTestText.text = ScoreTest.ToString();
         // set new creature
         if (currentCreature == null || currentCreaturePhase >= currentCreature.Pattern.Count) {
-            currentCreature = Creatures.Next(currentCreature);
+            currentCreature = AssetManager.Inst.Creatures.Next(currentCreature);
             currentCreaturePhase = 0;
             currentCreatureDialogue = 0;
             CreatureNameText.text = currentCreature.Name;
@@ -109,7 +110,7 @@ public class GameManager : Manager<GameManager> {
         }
         // set new question
         questionOrder.Shuffle();
-        currentQuestion = Questions.Next(currentQuestion);
+        currentQuestion = AssetManager.Inst.Questions.Next(currentQuestion);
         QuestionText.text = currentQuestion.Question.LineWrap(QuestionLineLength);
         Answer1Text.text = currentQuestion.GetAnswer(questionOrder[0]).Text.LineWrap(AnswerLineLength);
         Answer2Text.text = currentQuestion.GetAnswer(questionOrder[1]).Text.LineWrap(AnswerLineLength);
