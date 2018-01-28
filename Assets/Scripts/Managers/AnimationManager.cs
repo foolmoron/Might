@@ -12,6 +12,7 @@ public class AnimationManager : Manager<AnimationManager> {
     public Vector3 BackgroundActionParams;
     public ParticleSystem MagicParticles;
     public ParticleSystem DefenseParticles;
+    public AudioClip SelectSound;
 
     [Header("RPG")]
     public FloatNear ArmSword;
@@ -23,6 +24,10 @@ public class AnimationManager : Manager<AnimationManager> {
     public Vector3 ArmAct;
     public Vector3 ActionAnimPosition;
     public GameObject[] ActionAnimPrefabs;
+    public AudioClip[] ActionSounds = new AudioClip[4];
+    public AudioClip GoodSound;
+    public AudioClip BadSound;
+    public AudioClip NeutralSound;
 
     [Header("Test")]
     public FloatNear TestArm;
@@ -30,6 +35,9 @@ public class AnimationManager : Manager<AnimationManager> {
     public float ScribblingX;
     public ParticleSystem CorrectParticles;
     public ParticleSystem WrongParticles;
+    public AudioClip TestCorrect;
+    public AudioClip TestWrong;
+    public AudioClip ScribbleSound;
 
     void Start() {
         foreach (var buttonWithSelect in Buttons) {
@@ -53,6 +61,7 @@ public class AnimationManager : Manager<AnimationManager> {
     }
 
     IEnumerator DoChoiceAnimations(int choice) {
+        SelectSound.Play();
         // disable buttons
         {
             Buttons.ForEach(button => button.gameObject.SetActive(false));
@@ -87,6 +96,10 @@ public class AnimationManager : Manager<AnimationManager> {
             if (prefab) {
                 Instantiate(prefab, ActionAnimPosition, Quaternion.identity);
             }
+            var sound = ActionSounds[choice];
+            if (sound) {
+                sound.Play();
+            }
             yield return new WaitForSeconds(0.2f);
             switch (choice) {
             case 0:
@@ -103,7 +116,16 @@ public class AnimationManager : Manager<AnimationManager> {
                 break;
             }
             TestArm.BaseTarget = TestArm.BaseTarget.withX(ScribblingX); // move test arm with RPG action
-            yield return new WaitForSeconds(2f);
+            ScribbleSound.Play();
+            yield return new WaitForSeconds(1f);
+            if (GameManager.Inst.previousCreatureReaction == 1) {
+                GoodSound.Play();
+            } else if (GameManager.Inst.previousCreatureReaction == -1) {
+                BadSound.Play();
+            } else {
+                NeutralSound.Play();
+            }
+            yield return new WaitForSeconds(1f);
             GameManager.Inst.CreatureResponseBox.SetActive(false);
             if (GameManager.Inst.creaturePatternDone) {
                 GameManager.Inst.currentCreatureObj.GetComponent<FloatNear>().BaseTarget = GameManager.Inst.CreaturePositionFinal;
@@ -115,10 +137,13 @@ public class AnimationManager : Manager<AnimationManager> {
         {
             if (GameManager.Inst.previousTestAnswerScore >= 1) {
                 CorrectParticles.enableEmission(true);
+                TestCorrect.Play();
             } else {
                 WrongParticles.enableEmission(true);
+                TestWrong.Play();
             }
             yield return new WaitForSeconds(0.4f);
+            ScribbleSound.Play();
             TestArm.BaseTarget = TestArmResting[choice].to3(TestArm.BaseTarget.z);
             yield return new WaitForSeconds(1.2f);
             CorrectParticles.enableEmission(false);

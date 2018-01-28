@@ -41,6 +41,7 @@ public class GameManager : Manager<GameManager> {
     public GameObject currentCreatureObj { get; private set; }
     int currentCreaturePhase;
     int currentCreatureDialogue;
+    public int previousCreatureReaction { get; private set; }
     public bool creaturePatternDone { get { return currentCreaturePhase >= currentCreature.Pattern.Count; } }
     public bool creatureDialogueDone { get { return currentCreatureDialogue >= currentCreature.Dialogues.Count; } }
     QuestionData currentQuestion;
@@ -77,15 +78,18 @@ public class GameManager : Manager<GameManager> {
         }
         // do creature action
         var phase = currentCreature.Pattern[currentCreaturePhase];
+        previousCreatureReaction = 0;
         if (creatureAction == phase.GoodAction) {
             CreatureResponseText.text = phase.GoodReaction.LineWrap(ResponseLineLength);
             HealthRPG++;
             GoldRPG += phase.GoldOnGood;
             currentCreaturePhase++;
+            previousCreatureReaction = 1;
         } else if (creatureAction == phase.BadAction) {
             CreatureResponseText.text = phase.BadReaction.LineWrap(ResponseLineLength);
             HealthRPG--;
             currentCreaturePhase++;
+            previousCreatureReaction = -1;
         } else if (phase.UseBad2 && creatureAction == phase.BadAction2) {
             CreatureResponseText.text = phase.BadReaction2.LineWrap(ResponseLineLength);
             HealthRPG--;
