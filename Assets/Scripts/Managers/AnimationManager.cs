@@ -13,6 +13,15 @@ public class AnimationManager : Manager<AnimationManager> {
     public ParticleSystem MagicParticles;
     public ParticleSystem DefenseParticles;
 
+    [Header("RPG")]
+    public FloatNear ArmSword;
+    public FloatNear ArmMagic;
+    public FloatNear ArmDefense;
+    public FloatNear ArmTalk;
+    public Vector3 ArmBottom;
+    public Vector3 ArmUp;
+    public Vector3 ArmAct;
+
     [Header("Test")]
     public FloatNear TestArm;
     public Vector2[] TestArmResting = new Vector2[4];
@@ -24,16 +33,17 @@ public class AnimationManager : Manager<AnimationManager> {
         foreach (var buttonWithSelect in Buttons) {
             buttonWithSelect.OnSelected += button => HighlightChoice(Buttons.IndexOf(button));
         }
-        MagicParticles.enableEmission(false);
-        DefenseParticles.enableEmission(false);
         CorrectParticles.enableEmission(false);
         WrongParticles.enableEmission(false);
+        ArmSword.BaseTarget = ArmUp;
     }
     
     public void HighlightChoice(int choice) {
         TestArm.BaseTarget = TestArmResting[choice].to3(TestArm.BaseTarget.z);
-        MagicParticles.enableEmission(choice == 1);
-        DefenseParticles.enableEmission(choice == 2);
+        ArmSword.BaseTarget = choice == 0 ? ArmUp : ArmBottom;
+        ArmMagic.BaseTarget = choice == 1 ? ArmUp : ArmBottom;
+        ArmDefense.BaseTarget = choice == 2 ? ArmUp : ArmBottom;
+        ArmTalk.BaseTarget = choice == 3 ? ArmUp : ArmBottom;
     }
 
     public void MakeChoice(int choice) {
@@ -56,7 +66,35 @@ public class AnimationManager : Manager<AnimationManager> {
         // do rpg action
         {
             GameManager.Inst.CreatureResponseBox.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
+            switch (choice) {
+                case 0:
+                    ArmSword.BaseTarget = ArmAct;
+                    break;
+                case 1:
+                    ArmMagic.BaseTarget = ArmAct;
+                    break;
+                case 2:
+                    ArmDefense.BaseTarget = ArmAct;
+                    break;
+                case 3:
+                    ArmTalk.BaseTarget = ArmAct;
+                    break;
+            }
+            yield return new WaitForSeconds(1f);
+            switch (choice) {
+            case 0:
+                ArmSword.BaseTarget = ArmUp;
+                break;
+            case 1:
+                ArmMagic.BaseTarget = ArmUp;
+                break;
+            case 2:
+                ArmDefense.BaseTarget = ArmUp;
+                break;
+            case 3:
+                ArmTalk.BaseTarget = ArmUp;
+                break;
+            }
             TestArm.BaseTarget = TestArm.BaseTarget.withX(ScribblingX); // move test arm with RPG action
             yield return new WaitForSeconds(2f);
             GameManager.Inst.CreatureResponseBox.SetActive(false);
