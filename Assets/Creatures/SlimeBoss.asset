@@ -18,7 +18,10 @@ MonoBehaviour:
   - GoodAction: 1
     GoodReaction: It's dead!
     BadAction: 2
-    BadReaction: It melted your armor!
+    BadReaction: It melted your shield!
+    UseBad2: 1
+    BadAction2: 0
+    BadReaction2: It melted your sword!
     NeutralReaction: '...
 
 '

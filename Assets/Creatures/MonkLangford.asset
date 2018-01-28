@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae322779843528c40be5d038bc65e4fa, type: 3}
   m_Name: MonkLangford
   m_EditorClassIdentifier: 
-  Difficulty: 1
+  Difficulty: 2
   Name: Monk
   Sprite: {fileID: 0}
   Pattern:
@@ -19,15 +19,24 @@ MonoBehaviour:
     GoodReaction: Slimes are my quest.
     BadAction: 0
     BadReaction: I wouldn't do that if I were you.
+    UseBad2: 0
+    BadAction2: 1
+    BadReaction2: 
     NeutralReaction: You're peculiar. May god be with you.
   - GoodAction: 3
     GoodReaction: They can only be destroyed by magic.
     BadAction: 0
     BadReaction: You have one warning.
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
     NeutralReaction: You're peculiar. May god be with you.
   - GoodAction: 3
     GoodReaction: They killed my abbey.
     BadAction: 0
     BadReaction: BEGONE EVIL SPIRITS!
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
     NeutralReaction: You're peculiar. May god be with you.
   Dialogues: []
