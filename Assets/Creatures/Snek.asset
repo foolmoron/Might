@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Snek
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Name: Siple
+  Name: Sios
   Prefab: {fileID: 1151235781678052, guid: 596b3401d3b4d0d48a40cee5e5b9ee38, type: 2}
   Pattern:
   - GoodAction: 2

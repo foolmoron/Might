@@ -21,7 +21,7 @@ MonoBehaviour:
     BadAction: 0
     BadReaction: You have one warning.
     UseBad2: 0
-    BadAction2: 1
+    BadAction2: 0
     BadReaction2: 
     NeutralReaction: You're peculiar. May god be with you.
   - GoodAction: 2
