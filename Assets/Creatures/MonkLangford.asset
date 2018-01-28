@@ -37,7 +37,7 @@ MonoBehaviour:
   - Text: A brother of mine created slimes.  I now have no more brothers.
     HealthChange: 0
     GoldChange: 0
-  - Text: I killed one, but only one. There are many more.
+  - Text: I killed one slime, but only one. There are many more.
     HealthChange: 0
     GoldChange: 0
   - Text: They can only be destroyed by magic. If you see one, you are already dead.
