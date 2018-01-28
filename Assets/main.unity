@@ -3116,6 +3116,7 @@ MonoBehaviour:
   - {x: 5.9, y: -1.25}
   - {x: 5.9, y: -2.02}
   - {x: 5.9, y: -2.77}
+  ScribblingX: 2.6
 --- !u!1 &1926642074
 GameObject:
   m_ObjectHideFlags: 0

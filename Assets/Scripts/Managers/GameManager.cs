@@ -96,8 +96,8 @@ public class GameManager : Manager<GameManager> {
         }
         // do question answers
         ScoreTest += currentQuestion.GetAnswer(questionAnswer).Score;
-        // new round
-        NewRound();
+        // animation
+        AnimationManager.Inst.MakeChoice(choice - 1);
     }
 
     public void NewRound() {
