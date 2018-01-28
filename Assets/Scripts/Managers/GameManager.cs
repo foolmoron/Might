@@ -1,8 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -94,7 +91,6 @@ public class GameManager : Manager<GameManager> {
             currentCreaturePhase++;
         }
         // do question answers
-        var answer =
         ScoreTest += currentQuestion.GetAnswer(questionAnswer).Score;
         // new round
         NewRound();
