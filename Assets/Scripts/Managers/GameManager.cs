@@ -80,6 +80,7 @@ public class GameManager : Manager<GameManager> {
         if (creatureAction == phase.GoodAction) {
             CreatureResponseText.text = phase.GoodReaction.LineWrap(ResponseLineLength);
             HealthRPG++;
+            GoldRPG += phase.GoldOnGood;
             currentCreaturePhase++;
         } else if (creatureAction == phase.BadAction) {
             CreatureResponseText.text = phase.BadReaction.LineWrap(ResponseLineLength);

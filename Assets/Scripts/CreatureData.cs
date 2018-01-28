@@ -8,6 +8,8 @@ public class CreaturePhase {
     public CreatureAction GoodAction;
     [TextArea]
     public string GoodReaction = "The creature was damaged!";
+    [Range(0, 1000)]
+    public int GoldOnGood;
     public CreatureAction BadAction;
     [TextArea]
     public string BadReaction = "The creature hurt you!";
