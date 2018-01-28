@@ -28,7 +28,7 @@ MonoBehaviour:
 '
   - GoodAction: 1
     GoodReaction: The slime gets blasted to nothing. It's dead!
-    GoldOnGood: 0
+    GoldOnGood: 2
     BadAction: 2
     BadReaction: The slime begins to eat you.
     UseBad2: 1
@@ -38,6 +38,6 @@ MonoBehaviour:
 
 '
   Dialogues:
-  - Text: It starts to eat you...
-    HealthChange: -5
-    GoldChange: 0
+  - Text: It starts to eat you and your belongings...
+    HealthChange: -3
+    GoldChange: -200

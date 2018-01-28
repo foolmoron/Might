@@ -17,16 +17,18 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 1
     GoodReaction: The dragon's scales seem to lose some luster. His eyes narrow.
+    GoldOnGood: 0
     BadAction: 0
-    BadReaction: HRAAAAAAA!
+    BadReaction: You hear a rumbling. It's significantly hotter.
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 
     NeutralReaction: Could you not?
   - GoodAction: 1
-    GoodReaction: It dodges your attack, but flies away.
+    GoodReaction: It dodges your attack, but flies away, pooping some gold
+    GoldOnGood: 50
     BadAction: 0
-    BadReaction: HRAAAAAAA!
+    BadReaction: The dragon snorts smoke in your face, it burns.
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 
@@ -35,18 +37,14 @@ MonoBehaviour:
   - Text: My snout looks good? Thank you!
     HealthChange: 2
     GoldChange: 300
-  - Text: Once, my brother Fog destroyed an entire continent.
+  - Text: Once, my brother Fog destroyed an entire continent. Some guy made fun of
+      his nose.
     HealthChange: 0
     GoldChange: 0
-  - Text: Some guy made fun of his nose.
+  - Text: There's a terrifying old man in the forest.I would not wanna be on his bad
+      side.
     HealthChange: 0
     GoldChange: 0
-  - Text: There's a terrifying old man in the forest.
-    HealthChange: 0
-    GoldChange: 0
-  - Text: I would not wanna be on his bad side.
-    HealthChange: 0
-    GoldChange: 0
-  - Text: Dragon balls will not grant your wishes.
+  - Text: Dragon balls will not grant your wishes. Please don't.
     HealthChange: 0
     GoldChange: 0

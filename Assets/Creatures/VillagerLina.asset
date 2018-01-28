@@ -17,6 +17,7 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 2
     GoodReaction: You'll protect me? Yay
+    GoldOnGood: 50
     BadAction: 0
     BadReaction: Bad man! Somebody help!
     UseBad2: 0
@@ -24,13 +25,10 @@ MonoBehaviour:
     BadReaction2: 
     NeutralReaction: Teehee! That tickled.
   Dialogues:
-  - Text: Did you know the royal crest of Gallis is a helix!
+  - Text: Did you know the royal insignia of Gallis is a helix!
     HealthChange: 0
     GoldChange: 0
-  - Text: 'There''s a nice man with a rosary blowing up trees. '
-    HealthChange: 0
-    GoldChange: 0
-  - Text: He gave me some special water from the river.
+  - Text: There's a nice man with a rosary. He gave me some special water.
     HealthChange: 0
     GoldChange: 0
   - Text: A mean girl was here too. She made me sad.

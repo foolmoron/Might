@@ -13,13 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 0
   Name: Siple
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 1151235781678052, guid: 596b3401d3b4d0d48a40cee5e5b9ee38, type: 2}
   Pattern:
   - GoodAction: 2
     GoodReaction: You don't want to die. That is very mortal.
     GoldOnGood: 0
     BadAction: 0
-    BadReaction: You are a fly and annoyance.
+    BadReaction: I could squish you.
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 

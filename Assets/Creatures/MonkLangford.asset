@@ -17,6 +17,7 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 2
     GoodReaction: I won't hurt you.
+    GoldOnGood: 0
     BadAction: 0
     BadReaction: You have one warning.
     UseBad2: 0
@@ -25,6 +26,7 @@ MonoBehaviour:
     NeutralReaction: You're peculiar. May god be with you.
   - GoodAction: 2
     GoodReaction: I'll leave you alone now.
+    GoldOnGood: 0
     BadAction: 0
     BadReaction: BEGONE EVIL SPIRITS!
     UseBad2: 0
@@ -32,28 +34,19 @@ MonoBehaviour:
     BadReaction2: 
     NeutralReaction: 
   Dialogues:
-  - Text: A brother of mine created slimes.
-    HealthChange: 0
-    GoldChange: 0
-  - Text: ' I now have no more brothers.'
+  - Text: A brother of mine created slimes.  I now have no more brothers.
     HealthChange: 0
     GoldChange: 0
   - Text: I killed one, but only one. There are many more.
     HealthChange: 0
     GoldChange: 0
-  - Text: 'They can only be destroyed by magic. '
-    HealthChange: 0
-    GoldChange: 0
-  - Text: If you see one, you are already dead.
+  - Text: They can only be destroyed by magic. If you see one, you are already dead.
     HealthChange: 0
     GoldChange: 0
   - Text: I see good in you, take this. *he gives you water*
     HealthChange: 1
     GoldChange: 0
-  - Text: Have you seen a little girl?
-    HealthChange: 0
-    GoldChange: 0
-  - Text: You should defend her from danger.
+  - Text: Have you seen a little girl? You should defend her from danger.
     HealthChange: 0
     GoldChange: 0
   - Text: I heard the forest guardian is back too.

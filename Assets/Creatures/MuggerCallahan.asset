@@ -17,6 +17,7 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 0
     GoodReaction: Hey that hurt!
+    GoldOnGood: 0
     BadAction: 1
     BadReaction: My royal necklace protects me from magic!
     UseBad2: 0
@@ -24,7 +25,8 @@ MonoBehaviour:
     BadReaction2: 
     NeutralReaction: Stop that. I'm not gonna hit you.
   - GoodAction: 0
-    GoodReaction: I'll send you to prison for this!
+    GoodReaction: '*chokes* that was... a... mistake....'
+    GoldOnGood: 100
     BadAction: 1
     BadReaction: My royal necklace protects me from magic!
     UseBad2: 0
@@ -37,7 +39,7 @@ MonoBehaviour:
     GoldChange: 0
   - Text: You're useless! I'm taking your money!
     HealthChange: 0
-    GoldChange: -100
+    GoldChange: -400
   - Text: My dad Aidan Mor called a dragon ugly once.
     HealthChange: 0
     GoldChange: 0

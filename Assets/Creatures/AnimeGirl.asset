@@ -27,4 +27,4 @@ MonoBehaviour:
   Dialogues:
   - Text: "\u256D\u2229\u256E(\u039F_\u039F)\u256D\u2229\u256E"
     HealthChange: -1
-    GoldChange: 0
+    GoldChange: -200

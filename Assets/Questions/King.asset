@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: King
   m_EditorClassIdentifier: 
   Difficulty: 2
-  Question: Who was the King of Gallis, before the War of the West?
+  Question: Who was the King of Gallis who started the War of the West?
   Answer1:
     Text: Aidan Mor
     Score: 1
