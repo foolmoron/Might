@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b686dcc68ec28e4b8ad1dddfc5827c4, type: 3}
-  m_Name: what 7
+  m_Name: Acronym
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Question: Slimes cannot eat what?
+  Question: What does the acronym for IMAX stand for?
   Answer1:
-    Text: Spells
-    Score: 1
+    Text: Errolson Hugh's Vision of Techwear
+    Score: -1
   Answer2:
-    Text: Metal
+    Text: Inkay Machop Arbok Xatu
     Score: -1
   Answer3:
-    Text: People
+    Text: I may allocate Xenon
     Score: -1
   Answer4:
-    Text: A college education
+    Text: Image Maximum
     Score: 1

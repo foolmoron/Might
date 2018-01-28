@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b686dcc68ec28e4b8ad1dddfc5827c4, type: 3}
-  m_Name: what 2
+  m_Name: Slimes
   m_EditorClassIdentifier: 
-  Difficulty: 1
-  Question: This formerly precious metal used to be worth more than gold.
+  Difficulty: 0
+  Question: Slimes cannot eat what?
   Answer1:
-    Text: Lead
-    Score: -1
-  Answer2:
-    Text: Aluminum
+    Text: Spells
     Score: 1
+  Answer2:
+    Text: Metal
+    Score: -1
   Answer3:
-    Text: Bronze
+    Text: People
     Score: -1
   Answer4:
-    Text: Platinum
-    Score: -1
+    Text: A college education
+    Score: 1

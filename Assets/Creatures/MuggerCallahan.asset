@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae322779843528c40be5d038bc65e4fa, type: 3}
-  m_Name: PrinceMugger
+  m_Name: MuggerCallahan
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Name: PrinceMugger
+  Name: Mugger
   Sprite: {fileID: 0}
   Pattern:
   - GoodAction: 0

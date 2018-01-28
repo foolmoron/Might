@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b686dcc68ec28e4b8ad1dddfc5827c4, type: 3}
-  m_Name: what 8
+  m_Name: Morals
   m_EditorClassIdentifier: 
-  Difficulty: 2
-  Question: Who was the King of Gallis, before the War of the West?
+  Difficulty: 0
+  Question: Is it morally correct to kill a little girl?
   Answer1:
-    Text: Aidan Mor
+    Text: No
     Score: 1
   Answer2:
-    Text: Callahan Mor
+    Text: Sometimes
     Score: -1
   Answer3:
-    Text: Abbot Langford
+    Text: I have to pass the test
     Score: -1
   Answer4:
-    Text: General Tso
+    Text: Yes, I am an awful person.
     Score: -1

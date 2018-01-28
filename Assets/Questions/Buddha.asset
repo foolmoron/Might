@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b686dcc68ec28e4b8ad1dddfc5827c4, type: 3}
-  m_Name: what 5
+  m_Name: Buddha
   m_EditorClassIdentifier: 
-  Difficulty: 0
-  Question: Dragons are sensitive. What is the best way to approach them?
+  Difficulty: 2
+  Question: The tallest, completed statue in the world depicts _______.
   Answer1:
-    Text: Compliment their snout
-    Score: 1
-  Answer2:
-    Text: Show them a trick
+    Text: Lady Liberty
     Score: -1
+  Answer2:
+    Text: Vairocana Buddha
+    Score: 1
   Answer3:
-    Text: Give it a poke
+    Text: Jesus Christ
     Score: -1
   Answer4:
-    Text: Ignore them
+    Text: The Motherland
     Score: -1

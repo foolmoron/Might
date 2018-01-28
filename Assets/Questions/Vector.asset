@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b686dcc68ec28e4b8ad1dddfc5827c4, type: 3}
-  m_Name: D
+  m_Name: Vector
   m_EditorClassIdentifier: 
-  Difficulty: 2
-  Question: The Royal Insignia of Gallis is what shape?
+  Difficulty: 1
+  Question: "The game \u201CAsteroid\u201D was rendered in what kind of style?"
   Answer1:
-    Text: x
-    Score: 1
+    Text: Bitmap
+    Score: -1
   Answer2:
-    Text: k
+    Text: 8-Bit
     Score: -1
   Answer3:
-    Text: c
-    Score: -1
+    Text: Vector
+    Score: 1
   Answer4:
-    Text: d
+    Text: MOBA
     Score: -1

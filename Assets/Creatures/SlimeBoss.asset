@@ -9,23 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae322779843528c40be5d038bc65e4fa, type: 3}
-  m_Name: test1
+  m_Name: SlimeBoss
   m_EditorClassIdentifier: 
-  Difficulty: 0
-  Name: Wolf
+  Difficulty: 2
+  Name: Slime
   Sprite: {fileID: 0}
   Pattern:
-  - GoodAction: 0
-    GoodReaction: '*howls*'
-    BadAction: 1
-    BadReaction: '...'
-    NeutralReaction: '*barks*'
-  - GoodAction: 0
-    GoodReaction: '*yowls*'
-    BadAction: 1
-    BadReaction: '...'
-    NeutralReaction: '*barks*'
+  - GoodAction: 1
+    GoodReaction: It's dead!
+    BadAction: 2
+    BadReaction: It melted your armor!
+    NeutralReaction: '...
+
+'
   Dialogues:
-  - Text: '*barks*'
-    HealthChange: 0
+  - Text: It starts to eat you...
+    HealthChange: -5
     GoldChange: 0
