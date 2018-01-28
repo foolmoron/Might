@@ -12,26 +12,20 @@ MonoBehaviour:
   m_Name: test1
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Name: Super Monster
+  Name: Wolf
   Sprite: {fileID: 0}
   Pattern:
   - GoodAction: 0
-    GoodReaction: Good attack
+    GoodReaction: '*howls*'
     BadAction: 1
-    BadReaction: Bad magic
-    NeutralReaction: Neutral 1
-  - GoodAction: 2
-    GoodReaction: Good defend
-    BadAction: 3
-    BadReaction: Bad talk
-    NeutralReaction: Neutral 2
-  - GoodAction: 1
-    GoodReaction: Good magic
-    BadAction: 0
-    BadReaction: Bad attack
-    NeutralReaction: Neutral 3
+    BadReaction: '...'
+    NeutralReaction: '*barks*'
+  - GoodAction: 0
+    GoodReaction: '*yowls*'
+    BadAction: 1
+    BadReaction: '...'
+    NeutralReaction: '*barks*'
   Dialogues:
-  - Text: Dialogue 1
-    Score: 1
-  - Text: Dialogue 2
-    Score: -1
+  - Text: '*barks*'
+    HealthChange: 0
+    GoldChange: 0

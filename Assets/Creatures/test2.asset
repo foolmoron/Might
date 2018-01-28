@@ -12,22 +12,21 @@ MonoBehaviour:
   m_Name: test2
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Name: Innocent Villager
+  Name: Lina
   Sprite: {fileID: 0}
   Pattern:
-  - GoodAction: 1
-    GoodReaction: Good magic test2
-    BadAction: 2
-    BadReaction: Bad defend test2
-    NeutralReaction: Neutral test2
+  - GoodAction: 2
+    GoodReaction: You'll protect me? Yay
+    BadAction: 0
+    BadReaction: Bad man! Somebody help!
+    NeutralReaction: Teehee! That tickled.
   Dialogues:
-  - Text: Hey 1
-    Score: 0
-  - Text: Hey 2
-    Score: 0
-  - Text: Hey 3
-    Score: 0
-  - Text: Hey 4
-    Score: 1
-  - Text: Stop talking to me
-    Score: -1
+  - Text: Did you know the royal crest of Gallis is an x!
+    HealthChange: 0
+    GoldChange: 0
+  - Text: 'There''s a nice man with a rosary blowing up trees. He gave me some fruit. '
+    HealthChange: 0
+    GoldChange: 0
+  - Text: Hey, mister, can you help me find my parents?
+    HealthChange: 1
+    GoldChange: 101

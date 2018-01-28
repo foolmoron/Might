@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae322779843528c40be5d038bc65e4fa, type: 3}
+  m_Name: PrinceMugger
+  m_EditorClassIdentifier: 
+  Difficulty: 0
+  Name: PrinceMugger
+  Sprite: {fileID: 0}
+  Pattern:
+  - GoodAction: 0
+    GoodReaction: Hey that hurt!
+    BadAction: 1
+    BadReaction: My royal necklace protects me from magic!
+    NeutralReaction: Stop that. I'm not gonna hit you.
+  - GoodAction: 0
+    GoodReaction: I'll send you to prison for this!
+    BadAction: 1
+    BadReaction: My royal necklace protects me from magic!
+    NeutralReaction: Just give me your money please.
+  Dialogues:
+  - Text: The abbey's nearby, I'm looking for it.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: You've got a big nose, don't you.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: My dad died after he called a dragon ugly.
+    HealthChange: 0
+    GoldChange: 0
