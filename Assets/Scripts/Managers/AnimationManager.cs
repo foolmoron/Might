@@ -10,6 +10,8 @@ public class AnimationManager : Manager<AnimationManager> {
     public ScrambleParams Background;
     public Vector3 BackgroundCalmParams;
     public Vector3 BackgroundActionParams;
+    public ParticleSystem MagicParticles;
+    public ParticleSystem DefenseParticles;
 
     [Header("Test")]
     public FloatNear TestArm;
@@ -22,12 +24,16 @@ public class AnimationManager : Manager<AnimationManager> {
         foreach (var buttonWithSelect in Buttons) {
             buttonWithSelect.OnSelected += button => HighlightChoice(Buttons.IndexOf(button));
         }
+        MagicParticles.enableEmission(false);
+        DefenseParticles.enableEmission(false);
         CorrectParticles.enableEmission(false);
         WrongParticles.enableEmission(false);
     }
     
     public void HighlightChoice(int choice) {
         TestArm.BaseTarget = TestArmResting[choice].to3(TestArm.BaseTarget.z);
+        MagicParticles.enableEmission(choice == 1);
+        DefenseParticles.enableEmission(choice == 2);
     }
 
     public void MakeChoice(int choice) {
@@ -83,6 +89,7 @@ public class AnimationManager : Manager<AnimationManager> {
         {
             Buttons.ForEach(button => button.gameObject.SetActive(true));
             Buttons.ForEach(button => button.interactable = true);
+            Buttons[choice].Select();
         }
         // 
         GameManager.Inst.NewRound();
