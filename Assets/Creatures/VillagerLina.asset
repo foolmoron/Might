@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: VillagerLina
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Name: VillagerLina
+  Name: Lina
   Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
   Pattern:
   - GoodAction: 2
@@ -24,13 +24,21 @@ MonoBehaviour:
     BadReaction2: 
     NeutralReaction: Teehee! That tickled.
   Dialogues:
-  - Text: Did you know the royal crest of Gallis is an x!
+  - Text: Did you know the royal crest of Gallis is a helix!
     HealthChange: 0
     GoldChange: 0
-  - Text: There's a nice man with a rosary blowing up trees. He gave me some special
-      water from the river.
+  - Text: 'There''s a nice man with a rosary blowing up trees. '
     HealthChange: 0
     GoldChange: 0
-  - Text: Hey, mister, can you help me find my parents?
+  - Text: He gave me some special water from the river.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: A mean girl was here too. She made me sad.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: You can't defend from bullies.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: Hey, mister, could you help me find my parents?
     HealthChange: 1
-    GoldChange: 101
+    GoldChange: 50

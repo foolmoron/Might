@@ -17,8 +17,9 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 1
     GoodReaction: The slime gets blasted back. He reforms slowly.
+    GoldOnGood: 0
     BadAction: 2
-    BadReaction: It melts your shield!
+    BadReaction: It melts your defense!
     UseBad2: 1
     BadAction2: 0
     BadReaction2: It melts your sword!
@@ -27,6 +28,7 @@ MonoBehaviour:
 '
   - GoodAction: 1
     GoodReaction: The slime gets blasted to nothing. It's dead!
+    GoldOnGood: 0
     BadAction: 2
     BadReaction: The slime begins to eat you.
     UseBad2: 1

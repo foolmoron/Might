@@ -15,28 +15,47 @@ MonoBehaviour:
   Name: Monk
   Prefab: {fileID: 1532985436887940, guid: 653834e74190001439af82d09c977391, type: 2}
   Pattern:
-  - GoodAction: 3
-    GoodReaction: Slimes are my quest.
+  - GoodAction: 2
+    GoodReaction: I won't hurt you.
     BadAction: 0
-    BadReaction: I wouldn't do that if I were you.
+    BadReaction: You have one warning.
     UseBad2: 0
     BadAction2: 1
     BadReaction2: 
     NeutralReaction: You're peculiar. May god be with you.
-  - GoodAction: 3
-    GoodReaction: They can only be destroyed by magic.
-    BadAction: 0
-    BadReaction: You have one warning.
-    UseBad2: 0
-    BadAction2: 0
-    BadReaction2: 
-    NeutralReaction: You're peculiar. May god be with you.
-  - GoodAction: 3
-    GoodReaction: They killed my abbey.
+  - GoodAction: 2
+    GoodReaction: I'll leave you alone now.
     BadAction: 0
     BadReaction: BEGONE EVIL SPIRITS!
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 
-    NeutralReaction: You're peculiar. May god be with you.
-  Dialogues: []
+    NeutralReaction: 
+  Dialogues:
+  - Text: A brother of mine created slimes.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: ' I now have no more brothers.'
+    HealthChange: 0
+    GoldChange: 0
+  - Text: I killed one, but only one. There are many more.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: 'They can only be destroyed by magic. '
+    HealthChange: 0
+    GoldChange: 0
+  - Text: If you see one, you are already dead.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: I see good in you, take this. *he gives you water*
+    HealthChange: 1
+    GoldChange: 0
+  - Text: Have you seen a little girl?
+    HealthChange: 0
+    GoldChange: 0
+  - Text: You should defend her from danger.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: I heard the forest guardian is back too.
+    HealthChange: 0
+    GoldChange: 0

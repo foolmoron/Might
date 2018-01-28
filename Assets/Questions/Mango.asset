@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Mango
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Question: When mangoes were first imported to America, they were generally _____.
+  Question: Mangoes in America were traditionally what in the 17th century?
   Answer1:
     Text: Pickled
     Score: 1
@@ -23,5 +23,5 @@ MonoBehaviour:
     Text: Made into fruit salad
     Score: -1
   Answer4:
-    Text: the national fruit
+    Text: ' the national fruit'
     Score: -1

@@ -14,14 +14,14 @@ MonoBehaviour:
   Difficulty: 2
   Question: The Royal Insignia of Gallis is what shape?
   Answer1:
-    Text: x
+    Text: Helix
     Score: 1
   Answer2:
-    Text: k
+    Text: Square
     Score: -1
   Answer3:
-    Text: c
+    Text: Moon
     Score: -1
   Answer4:
-    Text: d
+    Text: Star
     Score: -1

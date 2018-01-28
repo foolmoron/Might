@@ -15,12 +15,38 @@ MonoBehaviour:
   Name: Dragon
   Prefab: {fileID: 1825727014422474, guid: cfee8fea147a61144a6b77a8d6e71b64, type: 2}
   Pattern:
-  - GoodAction: 3
-    GoodReaction: My snout looks good? Thank you!
+  - GoodAction: 1
+    GoodReaction: The dragon's scales seem to lose some luster. His eyes narrow.
     BadAction: 0
     BadReaction: HRAAAAAAA!
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 
     NeutralReaction: Could you not?
-  Dialogues: []
+  - GoodAction: 1
+    GoodReaction: It dodges your attack, but flies away.
+    BadAction: 0
+    BadReaction: HRAAAAAAA!
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
+    NeutralReaction: Could you not?
+  Dialogues:
+  - Text: My snout looks good? Thank you!
+    HealthChange: 2
+    GoldChange: 300
+  - Text: Once, my brother Fog destroyed an entire continent.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: Some guy made fun of his nose.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: There's a terrifying old man in the forest.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: I would not wanna be on his bad side.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: Dragon balls will not grant your wishes.
+    HealthChange: 0
+    GoldChange: 0

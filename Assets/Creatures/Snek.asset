@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae322779843528c40be5d038bc65e4fa, type: 3}
+  m_Name: Snek
+  m_EditorClassIdentifier: 
+  Difficulty: 0
+  Name: Siple
+  Prefab: {fileID: 0}
+  Pattern:
+  - GoodAction: 2
+    GoodReaction: You don't want to die. That is very mortal.
+    GoldOnGood: 0
+    BadAction: 0
+    BadReaction: You are a fly and annoyance.
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
+    NeutralReaction: You are a fly and an annoyance.
+  Dialogues:
+  - Text: The Abbey of Ithaca was destroyed. I do not know by what.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: Gallis has forgotten us, but I have not forgotten them.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: Long ago, I used to bless this land's waters. I regret that.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: There is a terrifying little girl running around. So profane.
+    HealthChange: 0
+    GoldChange: 0

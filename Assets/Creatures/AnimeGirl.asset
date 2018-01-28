@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae322779843528c40be5d038bc65e4fa, type: 3}
+  m_Name: AnimeGirl
+  m_EditorClassIdentifier: 
+  Difficulty: 2
+  Name: Poopy
+  Prefab: {fileID: 1708050994689250, guid: e5391facf35ddbe40b1336aa61c72643, type: 2}
+  Pattern:
+  - GoodAction: 0
+    GoodReaction: "\u256D\u2229\u256E(o.o)\u256D\u2229\u256E"
+    GoldOnGood: 0
+    BadAction: 2
+    BadReaction: "\u256D\u2229\u256E[>_<]\u256D\u2229\u256E"
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
+    NeutralReaction: "\u256D\u2229\u256E(-_-)\u256D\u2229\u256E"
+  Dialogues:
+  - Text: "\u256D\u2229\u256E(\u039F_\u039F)\u256D\u2229\u256E"
+    HealthChange: -1
+    GoldChange: 0

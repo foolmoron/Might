@@ -11,12 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae322779843528c40be5d038bc65e4fa, type: 3}
   m_Name: Wolf
   m_EditorClassIdentifier: 
-  Difficulty: 0
+  Difficulty: 1
   Name: Wolf
   Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
   Pattern:
   - GoodAction: 0
     GoodReaction: '*howls* The wolf did not like that.'
+    GoldOnGood: 0
     BadAction: 1
     BadReaction: The wolf seems unharmed, and bites your leg.
     UseBad2: 0
@@ -26,8 +27,9 @@ MonoBehaviour:
   - GoodAction: 0
     GoodReaction: You slash the wolf in the throat. It chokes on its blood, but runs
       off.
+    GoldOnGood: 0
     BadAction: 1
-    BadReaction: It still isn't hurting him! The wolf bites your arm.
+    BadReaction: It still isn't hurting him! The wolf bites your leg another time.
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 

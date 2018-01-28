@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Morals
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Question: Is it morally correct to kill a little girl?
+  Question: Should you kill a little girl?
   Answer1:
     Text: No
     Score: 1

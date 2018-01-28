@@ -32,12 +32,24 @@ MonoBehaviour:
     BadReaction2: 
     NeutralReaction: Just give me your money please.
   Dialogues:
-  - Text: The abbey's nearby, I'm looking for it.
+  - Text: I heard about some magic user around here. Is it you?
     HealthChange: 0
     GoldChange: 0
-  - Text: You've got a big nose, don't you.
+  - Text: You're useless! I'm taking your money!
+    HealthChange: 0
+    GoldChange: -100
+  - Text: My dad Aidan Mor called a dragon ugly once.
     HealthChange: 0
     GoldChange: 0
-  - Text: My dad died after he called a dragon ugly.
+  - Text: Yeah that didn't go well. Have you heard of the War of the West?
     HealthChange: 0
+    GoldChange: 0
+  - Text: Well, dragons can only be killed with magic. That's why I'm here.
+    HealthChange: 0
+    GoldChange: 0
+  - Text: Stop talking! Take this!
+    HealthChange: -1
+    GoldChange: 0
+  - Text: Stop talking! Take this!
+    HealthChange: -1
     GoldChange: 0
