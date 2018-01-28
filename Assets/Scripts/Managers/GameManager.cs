@@ -10,6 +10,8 @@ public class GameManager : Manager<GameManager> {
     public int QuestionLineLength = 25;
     [Range(0, 100)]
     public int AnswerLineLength = 22;
+    [Range(0, 100)]
+    public int ResponseLineLength = 23;
 
     [Header("RPG Stuff")]
     public int HealthRPG = 10;
@@ -17,8 +19,8 @@ public class GameManager : Manager<GameManager> {
     public int GoldRPG;
     public Text GoldRPGText;
     public TextMesh CreatureNameText;
+    public GameObject CreatureResponseBox;
     public TextMesh CreatureResponseText;
-    public SpriteRenderer CreatureSprite;
     public TextMesh CreatureDebug;
     public Vector3 CreaturePositionInit;
     public Vector3 CreaturePositionFinal;
@@ -73,15 +75,15 @@ public class GameManager : Manager<GameManager> {
         // do creature action
         var phase = currentCreature.Pattern[currentCreaturePhase];
         if (creatureAction == phase.GoodAction) {
-            CreatureResponseText.text = phase.GoodReaction;
+            CreatureResponseText.text = phase.GoodReaction.LineWrap(ResponseLineLength);
             HealthRPG++;
             currentCreaturePhase++;
         } else if (creatureAction == phase.BadAction) {
-            CreatureResponseText.text = phase.BadReaction;
+            CreatureResponseText.text = phase.BadReaction.LineWrap(ResponseLineLength);
             HealthRPG--;
             currentCreaturePhase++;
         } else if (phase.UseBad2 && creatureAction == phase.BadAction2) {
-            CreatureResponseText.text = phase.BadReaction2;
+            CreatureResponseText.text = phase.BadReaction2.LineWrap(ResponseLineLength);
             HealthRPG--;
             currentCreaturePhase++;
         } else if (creatureAction == CreatureAction.Talk) {
@@ -93,10 +95,10 @@ public class GameManager : Manager<GameManager> {
                 ? currentCreature.Dialogues[currentCreatureDialogue].GoldChange
                 : 0
                 ;
-            CreatureResponseText.text = currentCreature.Dialogues[currentCreatureDialogue].Text;
+            CreatureResponseText.text = currentCreature.Dialogues[currentCreatureDialogue].Text.LineWrap(ResponseLineLength);
             currentCreatureDialogue = Mathf.Min(currentCreatureDialogue + 1, currentCreature.Dialogues.Count - 1);
         } else {
-            CreatureResponseText.text = phase.NeutralReaction;
+            CreatureResponseText.text = phase.NeutralReaction.LineWrap(ResponseLineLength);
             currentCreaturePhase++;
         }
         // do question answers
@@ -116,6 +118,7 @@ public class GameManager : Manager<GameManager> {
             currentCreaturePhase = 0;
             currentCreatureDialogue = 0;
             CreatureNameText.text = currentCreature.Name;
+            CreatureResponseBox.SetActive(false);
             CreatureResponseText.text = "";
             CreatureDebug.text = currentCreature.name;
             currentCreatureObj = Instantiate(currentCreature.Prefab, CreaturePositionInit, Quaternion.identity);

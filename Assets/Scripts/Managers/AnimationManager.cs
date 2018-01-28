@@ -36,6 +36,11 @@ public class AnimationManager : Manager<AnimationManager> {
         }
         // do rpg action
         {
+            GameManager.Inst.CreatureResponseBox.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            TestArm.BaseTarget = TestArm.BaseTarget.withX(ScribblingX); // move test arm with RPG action
+            yield return new WaitForSeconds(2f);
+            GameManager.Inst.CreatureResponseBox.SetActive(false);
             if (GameManager.Inst.creaturePatternDone) {
                 GameManager.Inst.currentCreatureObj.GetComponent<FloatNear>().BaseTarget = GameManager.Inst.CreaturePositionInit;
                 yield return new WaitForSeconds(1f);
@@ -44,10 +49,9 @@ public class AnimationManager : Manager<AnimationManager> {
         }
         // do test scribble
         {
-            TestArm.BaseTarget = TestArm.BaseTarget.withX(ScribblingX);
-            yield return new WaitForSeconds(1.25f);
+            yield return new WaitForSeconds(0.4f);
             TestArm.BaseTarget = TestArmResting[choice].to3(TestArm.BaseTarget.z);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1.2f);
         }
         // reset buttons
         {
