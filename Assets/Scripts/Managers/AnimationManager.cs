@@ -21,6 +21,8 @@ public class AnimationManager : Manager<AnimationManager> {
     public Vector3 ArmBottom;
     public Vector3 ArmUp;
     public Vector3 ArmAct;
+    public Vector3 ActionAnimPosition;
+    public GameObject[] ActionAnimPrefabs;
 
     [Header("Test")]
     public FloatNear TestArm;
@@ -80,7 +82,12 @@ public class AnimationManager : Manager<AnimationManager> {
                     ArmTalk.BaseTarget = ArmAct;
                     break;
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.8f);
+            var prefab = ActionAnimPrefabs[choice];
+            if (prefab) {
+                Instantiate(prefab, ActionAnimPosition, Quaternion.identity);
+            }
+            yield return new WaitForSeconds(0.2f);
             switch (choice) {
             case 0:
                 ArmSword.BaseTarget = ArmUp;

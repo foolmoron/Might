@@ -17820,6 +17820,12 @@ MonoBehaviour:
   ArmBottom: {x: -4.12, y: -9.5, z: 0}
   ArmUp: {x: -4.12, y: -3.2, z: 0}
   ArmAct: {x: -3.8, y: -0.4, z: 0}
+  ActionAnimPosition: {x: -3.5, y: 0.17, z: -5}
+  ActionAnimPrefabs:
+  - {fileID: 0}
+  - {fileID: 1080033796699188, guid: 3e6461ec870084a41b370942f64854f8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   TestArm: {fileID: 1709283839}
   TestArmResting:
   - {x: 5.85, y: -0.6}
