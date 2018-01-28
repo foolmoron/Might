@@ -16,17 +16,18 @@ MonoBehaviour:
   Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
   Pattern:
   - GoodAction: 0
-    GoodReaction: '*howls*'
+    GoodReaction: '*howls* The wolf did not like that.'
     BadAction: 1
-    BadReaction: '...'
+    BadReaction: The wolf seems unharmed, and bites your leg.
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 
-    NeutralReaction: '*barks*'
+    NeutralReaction: The wolf barks and growls at you.
   - GoodAction: 0
-    GoodReaction: '*yowls*'
+    GoodReaction: You slash the wolf in the throat. It chokes on its blood, but runs
+      off.
     BadAction: 1
-    BadReaction: '...'
+    BadReaction: It still isn't hurting him! The wolf bites your arm.
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 

@@ -27,7 +27,8 @@ MonoBehaviour:
   - Text: Did you know the royal crest of Gallis is an x!
     HealthChange: 0
     GoldChange: 0
-  - Text: 'There''s a nice man with a rosary blowing up trees. He gave me some fruit. '
+  - Text: There's a nice man with a rosary blowing up trees. He gave me some special
+      water from the river.
     HealthChange: 0
     GoldChange: 0
   - Text: Hey, mister, can you help me find my parents?

@@ -16,12 +16,22 @@ MonoBehaviour:
   Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
   Pattern:
   - GoodAction: 1
-    GoodReaction: It's dead!
+    GoodReaction: The slime gets blasted back. He reforms slowly.
     BadAction: 2
-    BadReaction: It melted your shield!
+    BadReaction: It melts your shield!
     UseBad2: 1
     BadAction2: 0
-    BadReaction2: It melted your sword!
+    BadReaction2: It melts your sword!
+    NeutralReaction: '...
+
+'
+  - GoodAction: 1
+    GoodReaction: The slime gets blasted to nothing. It's dead!
+    BadAction: 2
+    BadReaction: The slime begins to eat you.
+    UseBad2: 1
+    BadAction2: 0
+    BadReaction2: The slime begins to eat you.
     NeutralReaction: '...
 
 '
