@@ -32,7 +32,7 @@ public class Dialogue {
 public class CreatureData : ScriptableObject {
     public Difficulty Difficulty;
     public string Name;
-    public Sprite Sprite;
+    public GameObject Prefab;
     public List<CreaturePhase> Pattern;
     public List<Dialogue> Dialogues;
 }
