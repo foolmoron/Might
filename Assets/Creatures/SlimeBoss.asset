@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 2
   Name: Slime
-  Sprite: {fileID: 0}
+  Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
   Pattern:
   - GoodAction: 1
     GoodReaction: It's dead!

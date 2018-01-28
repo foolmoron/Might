@@ -20,6 +20,8 @@ public class GameManager : Manager<GameManager> {
     public TextMesh CreatureResponseText;
     public SpriteRenderer CreatureSprite;
     public TextMesh CreatureDebug;
+    public Vector3 CreaturePositionInit;
+    public Vector3 CreaturePositionFinal;
 
     [Header("Test Stuff")]
     public int ScoreTest;
@@ -32,8 +34,11 @@ public class GameManager : Manager<GameManager> {
     public TextMesh QuestionDebug;
 
     CreatureData currentCreature;
+    public GameObject currentCreatureObj { get; private set; }
     int currentCreaturePhase;
     int currentCreatureDialogue;
+    public bool creaturePatternDone { get { return currentCreaturePhase >= currentCreature.Pattern.Count; } }
+    public bool creatureDialogueDone { get { return currentCreatureDialogue >= currentCreature.Dialogues.Count; } }
     QuestionData currentQuestion;
     int[] questionOrder = {1, 2, 3, 4};
 
@@ -106,14 +111,15 @@ public class GameManager : Manager<GameManager> {
         GoldRPGText.text = GoldRPG.ToString();
         ScoreTestText.text = ScoreTest.ToString();
         // set new creature
-        if (currentCreature == null || currentCreaturePhase >= currentCreature.Pattern.Count) {
+        if (currentCreature == null || creaturePatternDone) {
             currentCreature = AssetManager.Inst.Creatures.Next(currentCreature);
             currentCreaturePhase = 0;
             currentCreatureDialogue = 0;
             CreatureNameText.text = currentCreature.Name;
             CreatureResponseText.text = "";
-            // CreatureSprite.sprite = currentCreature.Sprite;
             CreatureDebug.text = currentCreature.name;
+            currentCreatureObj = Instantiate(currentCreature.Prefab, CreaturePositionInit, Quaternion.identity);
+            currentCreatureObj.GetComponent<FloatNear>().BaseTarget = CreaturePositionFinal;
         }
         // set new question
         questionOrder.Shuffle();

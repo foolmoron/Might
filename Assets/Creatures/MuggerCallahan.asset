@@ -13,17 +13,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 0
   Name: Mugger
-  Sprite: {fileID: 0}
+  Prefab: {fileID: 1010655668829860, guid: cad9fe1f7251b0741b0fcde5160c7624, type: 2}
   Pattern:
   - GoodAction: 0
     GoodReaction: Hey that hurt!
     BadAction: 1
     BadReaction: My royal necklace protects me from magic!
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
     NeutralReaction: Stop that. I'm not gonna hit you.
   - GoodAction: 0
     GoodReaction: I'll send you to prison for this!
     BadAction: 1
     BadReaction: My royal necklace protects me from magic!
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
     NeutralReaction: Just give me your money please.
   Dialogues:
   - Text: The abbey's nearby, I'm looking for it.

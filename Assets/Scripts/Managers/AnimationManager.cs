@@ -36,7 +36,11 @@ public class AnimationManager : Manager<AnimationManager> {
         }
         // do rpg action
         {
-            
+            if (GameManager.Inst.creaturePatternDone) {
+                GameManager.Inst.currentCreatureObj.GetComponent<FloatNear>().BaseTarget = GameManager.Inst.CreaturePositionInit;
+                yield return new WaitForSeconds(1f);
+                Destroy(GameManager.Inst.currentCreatureObj);
+            }
         }
         // do test scribble
         {

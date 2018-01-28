@@ -13,17 +13,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 0
   Name: Wolf
-  Sprite: {fileID: 0}
+  Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
   Pattern:
   - GoodAction: 0
     GoodReaction: '*howls*'
     BadAction: 1
     BadReaction: '...'
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
     NeutralReaction: '*barks*'
   - GoodAction: 0
     GoodReaction: '*yowls*'
     BadAction: 1
     BadReaction: '...'
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
     NeutralReaction: '*barks*'
   Dialogues:
   - Text: '*barks*'

@@ -13,12 +13,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 0
   Name: VillagerLina
-  Sprite: {fileID: 0}
+  Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
   Pattern:
   - GoodAction: 2
     GoodReaction: You'll protect me? Yay
     BadAction: 0
     BadReaction: Bad man! Somebody help!
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
     NeutralReaction: Teehee! That tickled.
   Dialogues:
   - Text: Did you know the royal crest of Gallis is an x!

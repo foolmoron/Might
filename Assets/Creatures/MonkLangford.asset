@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 2
   Name: Monk
-  Sprite: {fileID: 0}
+  Prefab: {fileID: 1532985436887940, guid: 653834e74190001439af82d09c977391, type: 2}
   Pattern:
   - GoodAction: 3
     GoodReaction: Slimes are my quest.

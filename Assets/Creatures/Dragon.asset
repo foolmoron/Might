@@ -13,11 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 0
   Name: Dragon
-  Sprite: {fileID: 0}
+  Prefab: {fileID: 1825727014422474, guid: cfee8fea147a61144a6b77a8d6e71b64, type: 2}
   Pattern:
   - GoodAction: 3
     GoodReaction: My snout looks good? Thank you!
     BadAction: 0
     BadReaction: HRAAAAAAA!
+    UseBad2: 0
+    BadAction2: 0
+    BadReaction2: 
     NeutralReaction: Could you not?
   Dialogues: []
