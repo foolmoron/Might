@@ -15,11 +15,15 @@ public class AnimationManager : Manager<AnimationManager> {
     public FloatNear TestArm;
     public Vector2[] TestArmResting = new Vector2[4];
     public float ScribblingX;
+    public ParticleSystem CorrectParticles;
+    public ParticleSystem WrongParticles;
 
     void Start() {
         foreach (var buttonWithSelect in Buttons) {
             buttonWithSelect.OnSelected += button => HighlightChoice(Buttons.IndexOf(button));
         }
+        CorrectParticles.enableEmission(false);
+        WrongParticles.enableEmission(false);
     }
     
     public void HighlightChoice(int choice) {
@@ -58,9 +62,16 @@ public class AnimationManager : Manager<AnimationManager> {
         }
         // do test scribble
         {
+            if (GameManager.Inst.previousTestAnswerScore >= 1) {
+                CorrectParticles.enableEmission(true);
+            } else {
+                WrongParticles.enableEmission(true);
+            }
             yield return new WaitForSeconds(0.4f);
             TestArm.BaseTarget = TestArmResting[choice].to3(TestArm.BaseTarget.z);
             yield return new WaitForSeconds(1.2f);
+            CorrectParticles.enableEmission(false);
+            WrongParticles.enableEmission(false);
         }
         // scramble params calm
         {

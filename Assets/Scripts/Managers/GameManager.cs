@@ -43,6 +43,7 @@ public class GameManager : Manager<GameManager> {
     public bool creatureDialogueDone { get { return currentCreatureDialogue >= currentCreature.Dialogues.Count; } }
     QuestionData currentQuestion;
     int[] questionOrder = {1, 2, 3, 4};
+    public int previousTestAnswerScore { get; private set; }
 
     void Start() {
         AssetManager.Inst.Creatures.Shuffle();
@@ -102,7 +103,8 @@ public class GameManager : Manager<GameManager> {
             currentCreaturePhase++;
         }
         // do question answers
-        ScoreTest += currentQuestion.GetAnswer(questionAnswer).Score;
+        previousTestAnswerScore = currentQuestion.GetAnswer(questionAnswer).Score;
+        ScoreTest += previousTestAnswerScore;
         // animation
         AnimationManager.Inst.MakeChoice(choice - 1);
     }
