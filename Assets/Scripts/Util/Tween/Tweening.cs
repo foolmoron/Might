@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Tweening : MonoBehaviour
 {
@@ -38,10 +39,12 @@ public class Tweening : MonoBehaviour
 
     new Renderer renderer;
     SpriteRenderer spriteRenderer;
+    Graphic graphic;
 
     void Awake() {
         renderer = GetComponent<Renderer>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        graphic = GetComponent<Graphic>();
     }
 
     public void MoveTo(Vector3 destination, float duration, Interpolate.EaseType easingFunction, Action<GameObject> onComplete, bool world)
@@ -90,7 +93,7 @@ public class Tweening : MonoBehaviour
 	
 	public void ColorTo(Color destination, float duration, Interpolate.EaseType easingFunction, Action<GameObject> onComplete)
 	{
-		colorInitial = spriteRenderer ? spriteRenderer.color : renderer.material.color;
+		colorInitial = graphic ? graphic.color : spriteRenderer ? spriteRenderer.color : renderer.material.color;
 		colorDisplacement = destination - colorInitial;
 		colorFunc = Interpolate.Ease(easingFunction);
 	    colorOnComplete = onComplete;
@@ -155,7 +158,9 @@ public class Tweening : MonoBehaviour
 			color.g = colorFunc(color.g, colorDisplacement.g, colorDuration, colorDurationTotal);
 			color.b = colorFunc(color.b, colorDisplacement.b, colorDuration, colorDurationTotal);
 			color.a = colorFunc(color.a, colorDisplacement.a, colorDuration, colorDurationTotal);
-            if (spriteRenderer) {
+            if (graphic) {
+                graphic.color = color;
+            } else if (spriteRenderer) {
                 spriteRenderer.color = color;
             } else {
                 renderer.material.color = color;
