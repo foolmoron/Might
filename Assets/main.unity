@@ -3324,8 +3324,8 @@ MonoBehaviour:
   - {fileID: 1091808915}
   - {fileID: 1201343428}
   Background: {fileID: 289910875}
-  BackgroundCalmParams: {x: 0.02, y: 19.03, z: 3.4}
-  BackgroundActionParams: {x: 0.05, y: 30.06, z: 13.4}
+  BackgroundCalmParams: {x: 0.03, y: 19.03, z: 3.4}
+  BackgroundActionParams: {x: 0.055, y: 30.06, z: 13.4}
   TestArm: {fileID: 1709283839}
   TestArmResting:
   - {x: 5.9, y: -0.6}
