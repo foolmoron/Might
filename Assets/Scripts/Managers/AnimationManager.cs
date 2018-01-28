@@ -61,7 +61,7 @@ public class AnimationManager : Manager<AnimationManager> {
             yield return new WaitForSeconds(2f);
             GameManager.Inst.CreatureResponseBox.SetActive(false);
             if (GameManager.Inst.creaturePatternDone) {
-                GameManager.Inst.currentCreatureObj.GetComponent<FloatNear>().BaseTarget = GameManager.Inst.CreaturePositionInit;
+                GameManager.Inst.currentCreatureObj.GetComponent<FloatNear>().BaseTarget = GameManager.Inst.CreaturePositionFinal;
                 yield return new WaitForSeconds(1f);
                 Destroy(GameManager.Inst.currentCreatureObj);
             }

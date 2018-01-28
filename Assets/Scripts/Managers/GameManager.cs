@@ -22,8 +22,10 @@ public class GameManager : Manager<GameManager> {
     public GameObject CreatureResponseBox;
     public TextMesh CreatureResponseText;
     public TextMesh CreatureDebug;
-    public Vector3 CreaturePositionInit;
+    public Vector3 CreaturePosition;
     public Vector3 CreaturePositionFinal;
+    public Vector3 CreatureScaleInit = Vector3.zero;
+    public Vector3 CreatureScaleFinal = Vector3.one;
 
     [Header("Test Stuff")]
     public int ScoreTest;
@@ -123,8 +125,12 @@ public class GameManager : Manager<GameManager> {
             CreatureResponseBox.SetActive(false);
             CreatureResponseText.text = "";
             CreatureDebug.text = currentCreature.name;
-            currentCreatureObj = Instantiate(currentCreature.Prefab, CreaturePositionInit, Quaternion.identity);
-            currentCreatureObj.GetComponent<FloatNear>().BaseTarget = CreaturePositionFinal;
+            currentCreatureObj = Instantiate(currentCreature.Prefab, CreaturePosition, Quaternion.identity);
+            currentCreatureObj.transform.localScale = CreatureScaleInit;
+            Tween.ScaleTo(currentCreatureObj, CreatureScaleFinal, 0.5f, Interpolate.EaseType.EaseOutQuad);
+            var sprite = currentCreatureObj.GetComponentInChildren<SpriteRenderer>();
+            sprite.color = sprite.color.withAlpha(0);
+            Tween.ColorTo(sprite.gameObject, sprite.color.withAlpha(1), 0.4f, Interpolate.EaseType.EaseOutSine);
         }
         // set new question
         questionOrder.Shuffle();

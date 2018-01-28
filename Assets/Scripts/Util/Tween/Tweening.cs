@@ -37,9 +37,11 @@ public class Tweening : MonoBehaviour
 	float colorDurationTotal;
 
     new Renderer renderer;
+    SpriteRenderer spriteRenderer;
 
     void Awake() {
         renderer = GetComponent<Renderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void MoveTo(Vector3 destination, float duration, Interpolate.EaseType easingFunction, Action<GameObject> onComplete, bool world)
@@ -88,7 +90,7 @@ public class Tweening : MonoBehaviour
 	
 	public void ColorTo(Color destination, float duration, Interpolate.EaseType easingFunction, Action<GameObject> onComplete)
 	{
-		colorInitial = renderer.material.color;
+		colorInitial = spriteRenderer ? spriteRenderer.color : renderer.material.color;
 		colorDisplacement = destination - colorInitial;
 		colorFunc = Interpolate.Ease(easingFunction);
 	    colorOnComplete = onComplete;
@@ -153,7 +155,11 @@ public class Tweening : MonoBehaviour
 			color.g = colorFunc(color.g, colorDisplacement.g, colorDuration, colorDurationTotal);
 			color.b = colorFunc(color.b, colorDisplacement.b, colorDuration, colorDurationTotal);
 			color.a = colorFunc(color.a, colorDisplacement.a, colorDuration, colorDurationTotal);
-            renderer.material.color = color;
+            if (spriteRenderer) {
+                spriteRenderer.color = color;
+            } else {
+                renderer.material.color = color;
+            }
             if (colorDuration >= colorDurationTotal) { // call event at the end after all properties have been set
                 if (colorOnComplete != null) colorOnComplete(gameObject);
             }

@@ -17,6 +17,6 @@ public class ButtonWithSelect : Button {
 
     public override void OnPointerEnter(PointerEventData eventData) {
         base.OnPointerEnter(eventData);
-        OnSelected(this);
+        Select();
     }
 }
