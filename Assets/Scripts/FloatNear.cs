@@ -22,7 +22,7 @@ public class FloatNear : MonoBehaviour {
         if (offsetTime > 0) {
             offsetTime -= Time.deltaTime;
         } else {
-            CurrentOffset = OffsetRange.scaledWith(new Vector2(Random.value, Random.value));
+            CurrentOffset = OffsetRange.scaledWith(new Vector2(Random.value - 0.5f, Random.value - 0.5f));
             offsetTime = OffsetInterval;
         }
         // move

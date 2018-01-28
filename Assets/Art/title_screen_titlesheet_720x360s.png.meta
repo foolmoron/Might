@@ -1,9 +1,25 @@
 fileFormatVersion: 2
 guid: 0b006fa504e9773479385e0aa9a2caae
-timeCreated: 1517109934
+timeCreated: 1517123979
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: title_screen_titlesheet_720x360s_0
+    21300002: title_screen_titlesheet_720x360s_1
+    21300004: title_screen_titlesheet_720x360s_2
+    21300006: title_screen_titlesheet_720x360s_3
+    21300008: title_screen_titlesheet_720x360s_4
+    21300010: title_screen_titlesheet_720x360s_5
+    21300012: title_screen_titlesheet_720x360s_6
+    21300014: title_screen_titlesheet_720x360s_7
+    21300016: title_screen_titlesheet_720x360s_8
+    21300018: title_screen_titlesheet_720x360s_9
+    21300020: title_screen_titlesheet_720x360s_10
+    21300022: title_screen_titlesheet_720x360s_11
+    21300024: title_screen_titlesheet_720x360s_12
+    21300026: title_screen_titlesheet_720x360s_13
+    21300028: title_screen_titlesheet_720x360s_14
+    21300030: title_screen_titlesheet_720x360s_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -31,7 +47,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -40,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -57,7 +73,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -67,7 +83,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -77,7 +93,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -87,7 +103,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: PS4
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -97,7 +113,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -108,7 +124,231 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5040
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4680
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3960
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2520
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_screen_titlesheet_720x360s_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 720
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

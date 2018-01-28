@@ -12,7 +12,9 @@
 		_Width("Width", Range(0.0, 1.0)) = 0.1
 		_Strength("Strength", Range(0.0, 1.0)) = 1
 		_Freq("Frequency", Range(0.0, 100.0)) = 35
+		_Freq2("Frequency Mult", Range(0.0, 20)) = 1
 		_Step("Step", Range(0.0, 100)) = 15
+		_Step2("Step Mult", Range(0.0, 20)) = 1
 		_EdgeSmoothing("Edge Smoothing", Range(0.0, 10.0)) = 4
 		_Timescale("Timescale", Range(0.0, 40)) = 1
 		_CenterX("Center", Range(0.0, 1.0)) = 0.5
@@ -44,11 +46,15 @@
             #pragma multi_compile _ PIXELSNAP_ON
             #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
             #include "UnitySprites.cginc"
+
+			static const float TAU = 6.283185;
 			
 			float _Width;
 			float _Strength;
 			float _Freq;
+			float _Freq2;
 			float _Step;
+			float _Step2;
 			float _EdgeSmoothing;
 			float _Timescale;
 			float _CenterX;
@@ -60,8 +66,8 @@
 				float2 uv = IN.texcoord;
 				float min = _CenterX - (_Width / 2);
 				float max = _CenterX + (_Width / 2);
-				float wave = (sin(uv.y * _Freq + _Time.w * _Timescale) + 1) / 2;
-				wave = floor(wave * _Step) / _Step;
+				float x = fmod(floor(uv.y * _Step * _Step2) / (_Step * _Step2) * _Freq * _Freq2 + _Time.w * _Timescale, TAU) / TAU;
+				float wave = (sin(x * TAU) + 1) / 2;
 				float dist = (uv.x - min) / _Width;
 				float stretch = 0;
 				if (dist < wave) {
