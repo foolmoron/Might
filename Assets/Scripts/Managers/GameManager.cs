@@ -1,8 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -78,6 +75,10 @@ public class GameManager : Manager<GameManager> {
             CreatureResponseText.text = phase.BadReaction;
             HealthRPG--;
             currentCreaturePhase++;
+        } else if (phase.UseBad2 && creatureAction == phase.BadAction2) {
+            CreatureResponseText.text = phase.BadReaction2;
+            HealthRPG--;
+            currentCreaturePhase++;
         } else if (creatureAction == CreatureAction.Talk) {
             HealthRPG += currentCreature.Dialogues.Count > currentCreatureDialogue
                 ? currentCreature.Dialogues[currentCreatureDialogue].HealthChange
@@ -94,7 +95,6 @@ public class GameManager : Manager<GameManager> {
             currentCreaturePhase++;
         }
         // do question answers
-        var answer =
         ScoreTest += currentQuestion.GetAnswer(questionAnswer).Score;
         // new round
         NewRound();
