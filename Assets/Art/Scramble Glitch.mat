@@ -34,12 +34,14 @@ Material:
     - _DistortionExp: 3
     - _EdgeSmoothing: 10
     - _EnableExternalAlpha: 0
-    - _Freq: 32.5
+    - _Freq: 19.03
     - _Freq2: 1
     - _Step: 36
+    - _Step2: 1
     - _Strength: 1
-    - _Timescale: 3.3
-    - _Width: 0.033
+    - _T: 0
+    - _Timescale: 3.4
+    - _Width: 0.02
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}

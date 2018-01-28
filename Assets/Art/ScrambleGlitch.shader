@@ -18,6 +18,7 @@
 		_EdgeSmoothing("Edge Smoothing", Range(0.0, 10.0)) = 4
 		_Timescale("Timescale", Range(0.0, 40)) = 1
 		_CenterX("Center", Range(0.0, 1.0)) = 0.5
+		[HideInInspector] _T("T", Float) = 0
     }
 
     SubShader
@@ -58,6 +59,7 @@
 			float _EdgeSmoothing;
 			float _Timescale;
 			float _CenterX;
+			float _T;
 
 			float rand(float n){return frac(sin(n) * 43758.5453123);}
 
@@ -66,7 +68,7 @@
 				float2 uv = IN.texcoord;
 				float min = _CenterX - (_Width / 2);
 				float max = _CenterX + (_Width / 2);
-				float x = fmod(floor(uv.y * _Step * _Step2) / (_Step * _Step2) * _Freq * _Freq2 + _Time.w * _Timescale, TAU) / TAU;
+				float x = fmod(floor(uv.y * _Step * _Step2) / (_Step * _Step2) * _Freq * _Freq2 + _T, TAU) / TAU;
 				float wave = (sin(x * TAU) + 1) / 2;
 				float dist = (uv.x - min) / _Width;
 				float stretch = 0;

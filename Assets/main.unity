@@ -331,6 +331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 289910873}
   - component: {fileID: 289910874}
+  - component: {fileID: 289910875}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -395,6 +396,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &289910875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 289910872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007f7d85c8326f94ab091592747c02d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Width: 0
+  Frequency: 0
+  Timescale: 0
+  Speed: 0.1
 --- !u!1 &306778011
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,6 +3323,9 @@ MonoBehaviour:
   - {fileID: 660733681}
   - {fileID: 1091808915}
   - {fileID: 1201343428}
+  Background: {fileID: 289910875}
+  BackgroundCalmParams: {x: 0.02, y: 19.03, z: 3.4}
+  BackgroundActionParams: {x: 0.05, y: 30.06, z: 13.4}
   TestArm: {fileID: 1709283839}
   TestArmResting:
   - {x: 5.9, y: -0.6}

@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1784927199}
   - component: {fileID: 1784927198}
   - component: {fileID: 1784927197}
+  - component: {fileID: 1784927201}
   m_Layer: 0
   m_Name: title_screen_titlesheet_720x360s_0
   m_TagString: Untagged
@@ -221,6 +222,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1784927201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784927196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007f7d85c8326f94ab091592747c02d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Width: 0
+  Frequency: 0
+  Timescale: 0
+  Speed: 0.1
 --- !u!1 &2077224648
 GameObject:
   m_ObjectHideFlags: 0

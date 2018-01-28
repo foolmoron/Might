@@ -7,6 +7,9 @@ public class AnimationManager : Manager<AnimationManager> {
 
     [Header("UI")]
     public ButtonWithSelect[] Buttons;
+    public ScrambleParams Background;
+    public Vector3 BackgroundCalmParams;
+    public Vector3 BackgroundActionParams;
 
     [Header("Test")]
     public FloatNear TestArm;
@@ -34,6 +37,12 @@ public class AnimationManager : Manager<AnimationManager> {
             Buttons.ForEach(button => button.interactable = false);
             Buttons[choice].gameObject.SetActive(true);
         }
+        // scramble params action
+        {
+            Background.Width = BackgroundActionParams.x;
+            Background.Frequency = BackgroundActionParams.y;
+            Background.Timescale = BackgroundActionParams.z;
+        }
         // do rpg action
         {
             GameManager.Inst.CreatureResponseBox.SetActive(true);
@@ -52,6 +61,12 @@ public class AnimationManager : Manager<AnimationManager> {
             yield return new WaitForSeconds(0.4f);
             TestArm.BaseTarget = TestArmResting[choice].to3(TestArm.BaseTarget.z);
             yield return new WaitForSeconds(1.2f);
+        }
+        // scramble params calm
+        {
+            Background.Width = BackgroundCalmParams.x;
+            Background.Frequency = BackgroundCalmParams.y;
+            Background.Timescale = BackgroundCalmParams.z;
         }
         // reset buttons
         {
