@@ -14,7 +14,7 @@
 		_Freq("Frequency", Range(0.0, 100.0)) = 35
 		_Step("Step", Range(0.0, 100)) = 15
 		_EdgeSmoothing("Edge Smoothing", Range(0.0, 10.0)) = 4
-		_Timescale("Timescale", Range(0.0, 5)) = 1
+		_Timescale("Timescale", Range(0.0, 40)) = 1
 		_CenterX("Center", Range(0.0, 1.0)) = 0.5
     }
 
@@ -72,7 +72,11 @@
 				stretch *= 1 - pow(abs(dist - 0.5) * 2, _EdgeSmoothing);
 				stretch *= _Strength;
 				if (uv.x >= min && uv.x < max) {
-					uv.x += stretch * _Width / 2;
+					if (dist < wave) {
+						uv.x = min + stretch * _Width / 2;
+					} else {
+						uv.x = max - stretch * _Width / 2;
+					}
 				}
 				fixed4 c = SampleSpriteTexture(uv) * IN.color;
 				c.rgb *= c.a;
