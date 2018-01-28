@@ -75,6 +75,10 @@ public class GameManager : Manager<GameManager> {
             CreatureResponseText.text = phase.BadReaction;
             HealthRPG--;
             currentCreaturePhase++;
+        } else if (phase.UseBad2 && creatureAction == phase.BadAction2) {
+            CreatureResponseText.text = phase.BadReaction2;
+            HealthRPG--;
+            currentCreaturePhase++;
         } else if (creatureAction == CreatureAction.Talk) {
             HealthRPG += currentCreature.Dialogues.Count > currentCreatureDialogue
                 ? currentCreature.Dialogues[currentCreatureDialogue].HealthChange

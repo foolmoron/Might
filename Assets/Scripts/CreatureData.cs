@@ -11,7 +11,10 @@ public class CreaturePhase {
     public CreatureAction BadAction;
     [TextArea]
     public string BadReaction = "The creature hurt you!";
-    // bad action 2
+    public bool UseBad2;
+    public CreatureAction BadAction2;
+    [TextArea]
+    public string BadReaction2 = "";
     [TextArea]
     public string NeutralReaction = "Nothing happened...";
 }
