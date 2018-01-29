@@ -32,7 +32,7 @@ MonoBehaviour:
     UseBad2: 0
     BadAction2: 0
     BadReaction2: 
-    NeutralReaction: 
+    NeutralReaction: You're peculiar. May god be with you.
   Dialogues:
   - Text: A brother of mine created slimes.  I now have no more brothers.
     HealthChange: 0
