@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class AnimationManager : Manager<AnimationManager> {
 
+    public Animator Animator;
+    public string LoseAnim;
+    public string WinAnim;
+
     [Header("UI")]
     public ButtonWithSelect[] Buttons;
     public ScrambleParams Background;
@@ -126,6 +130,7 @@ public class AnimationManager : Manager<AnimationManager> {
                 NeutralSound.Play();
             }
             yield return new WaitForSeconds(1.5f);
+            GameManager.Inst.UpdateRPG();
             GameManager.Inst.CreatureResponseBox.SetActive(false);
             if (GameManager.Inst.creaturePatternDone) {
                 GameManager.Inst.currentCreatureObj.GetComponent<FloatNear>().BaseTarget = GameManager.Inst.CreaturePositionFinal;
@@ -145,6 +150,7 @@ public class AnimationManager : Manager<AnimationManager> {
             yield return new WaitForSeconds(0.4f);
             ScribbleSound.Play();
             TestArm.BaseTarget = TestArmResting[choice].to3(TestArm.BaseTarget.z);
+            GameManager.Inst.UpdateTest();
             yield return new WaitForSeconds(1.2f);
             CorrectParticles.enableEmission(false);
             WrongParticles.enableEmission(false);
@@ -155,13 +161,25 @@ public class AnimationManager : Manager<AnimationManager> {
             Background.Frequency = BackgroundCalmParams.y;
             Background.Timescale = BackgroundCalmParams.z;
         }
+        // game over?
+        if (GameManager.Inst.isLose) {
+            GameManager.Gold = GameManager.Inst.GoldRPG;
+            GameManager.Score = GameManager.Inst.ScoreTest;
+            Animator.PlayFromBeginning(LoseAnim);
+            yield break;
+        } else if (GameManager.Inst.isWin) {
+            GameManager.Gold = GameManager.Inst.GoldRPG;
+            GameManager.Score = GameManager.Inst.ScoreTest;
+            Animator.PlayFromBeginning(WinAnim);
+            yield break;
+        }
         // reset buttons
         {
             Buttons.ForEach(button => button.gameObject.SetActive(true));
             Buttons.ForEach(button => button.interactable = true);
             Buttons[choice].Select();
         }
-        // 
+        // new round
         GameManager.Inst.NewRound();
     }
 }

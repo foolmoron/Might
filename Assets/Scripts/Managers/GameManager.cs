@@ -12,6 +12,15 @@ public class GameManager : Manager<GameManager> {
     public int AnswerLineLength = 22;
     [Range(0, 100)]
     public int ResponseLineLength = 23;
+    [Range(0, 100)]
+    public int QuestionsBeforeWin = 12;
+    int questionsAnswered;
+
+    public bool isWin { get { return questionsAnswered >= QuestionsBeforeWin; } }
+    public bool isLose { get { return HealthRPG == 0; } }
+
+    public static int Gold;
+    public static int Score;
 
     [Header("RPG Stuff")]
     public int HealthRPG = 5;
@@ -115,16 +124,20 @@ public class GameManager : Manager<GameManager> {
         // do question answers
         previousTestAnswerScore = currentQuestion.GetAnswer(questionAnswer).Score;
         ScoreTest += previousTestAnswerScore;
+        // endgame?
+        questionsAnswered++;
         // animation
         AnimationManager.Inst.MakeChoice(choice - 1);
     }
 
-    public void NewRound() {
-        // update texts
+    public void UpdateRPG() {
         for (int i = 0; i < Hearts.Length; i++) {
             Hearts[i].SetActive(i < HealthRPG);
         }
         GoldRPGText.text = GoldRPG.ToString();
+    }
+
+    public void UpdateTest() {
         if (ScoreTest >= 8) { // A
             GradeImage.sprite = Grades[0];
         } else if (ScoreTest >= 4) { // B
@@ -136,6 +149,11 @@ public class GameManager : Manager<GameManager> {
         } else { // F
             GradeImage.sprite = Grades[4];
         }
+    }
+
+    public void NewRound() {
+        UpdateRPG();
+        UpdateTest();
         // set new creature
         if (currentCreature == null || creaturePatternDone) {
             currentCreature = AssetManager.Inst.Creatures.Next(currentCreature);

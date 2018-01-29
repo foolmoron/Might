@@ -14,8 +14,4 @@ public class AnimOnClick : MonoBehaviour {
             enabled = false;
         }
     }
-
-    public void LoadScene(string scene) {
-        SceneManager.LoadScene(scene);
-    }
 }
