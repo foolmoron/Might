@@ -9,78 +9,78 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1010655668829860}
+  m_RootGameObject: {fileID: 1944020324336854}
   m_IsPrefabParent: 1
---- !u!1 &1010655668829860
+--- !u!1 &1686158936388264
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4896703520728608}
-  - component: {fileID: 114228818831503008}
+  - component: {fileID: 4419041267534244}
+  - component: {fileID: 212107212730015060}
+  - component: {fileID: 95654857594834594}
   m_Layer: 0
-  m_Name: PrinceMugger
+  m_Name: wolf_sheet_300x300_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1744349208380886
+--- !u!1 &1944020324336854
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4358247913958074}
-  - component: {fileID: 212702665752964880}
-  - component: {fileID: 95199240707571038}
+  - component: {fileID: 4835980766256456}
+  - component: {fileID: 114943743163868532}
   m_Layer: 0
-  m_Name: mugger_flap_tilesheet_300x300_0
+  m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4358247913958074
+--- !u!4 &4419041267534244
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1744349208380886}
+  m_GameObject: {fileID: 1686158936388264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4896703520728608}
+  m_Father: {fileID: 4835980766256456}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4896703520728608
+--- !u!4 &4835980766256456
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1010655668829860}
+  m_GameObject: {fileID: 1944020324336854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.861744, y: -15.129261, z: 0}
+  m_LocalPosition: {x: -30.36, y: -10.634618, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4358247913958074}
+  - {fileID: 4419041267534244}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95199240707571038
+--- !u!95 &95654857594834594
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1744349208380886}
+  m_GameObject: {fileID: 1686158936388264}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 84f09a4b5a3d5394b9d23470f40f13e3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 65cf836a998ec56428cdd11dd1086412, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -88,12 +88,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114228818831503008
+--- !u!114 &114943743163868532
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1010655668829860}
+  m_GameObject: {fileID: 1944020324336854}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb09e99123a4c7b48bf243145b209c41, type: 3}
@@ -104,12 +104,12 @@ MonoBehaviour:
   OffsetRange: {x: 0.62, y: 0.2}
   OffsetInterval: 0.75
   Speed: 0.025
---- !u!212 &212702665752964880
+--- !u!212 &212107212730015060
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1744349208380886}
+  m_GameObject: {fileID: 1686158936388264}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -138,7 +138,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7723bcbb5296581429c37e604451117c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 986074cca8017514fbf388ee2a3ab504, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -8430,7 +8430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &844379484
 Transform:
   m_ObjectHideFlags: 0
@@ -17261,6 +17261,7 @@ MonoBehaviour:
   Answer3Text: {fileID: 1312552154}
   Answer4Text: {fileID: 1597542376}
   QuestionDebug: {fileID: 2010461257}
+  currentCreature: {fileID: 0}
 --- !u!1 &1493321904
 GameObject:
   m_ObjectHideFlags: 0
@@ -18919,7 +18920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2010461256
 Transform:
   m_ObjectHideFlags: 0

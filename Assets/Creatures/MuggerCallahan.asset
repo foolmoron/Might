@@ -14,6 +14,8 @@ MonoBehaviour:
   Difficulty: 0
   Name: Mugger
   Prefab: {fileID: 1010655668829860, guid: cad9fe1f7251b0741b0fcde5160c7624, type: 2}
+  IntroSound: {fileID: 8300000, guid: d380bcaa406e3474f9e9d74459f318e6, type: 3}
+  AttackSound: {fileID: 8300000, guid: 6e727240bca4b5d4fa4d1cb05174ce2a, type: 3}
   Pattern:
   - GoodAction: 0
     GoodReaction: Hey that hurt!

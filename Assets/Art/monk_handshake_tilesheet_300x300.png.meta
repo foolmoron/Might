@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 59177d982a3fc5d4ca61b0eacee13835
-timeCreated: 1517188624
+guid: 78aaa900bafea574f93c2d5caef3cc2a
+timeCreated: 1517188103
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: smoke_puff_sheet_67x19s_0
-    21300002: smoke_puff_sheet_67x19s_1
-    21300004: smoke_puff_sheet_67x19s_2
-    21300006: smoke_puff_sheet_67x19s_3
-    21300008: smoke_puff_sheet_67x19s_4
-    21300010: smoke_puff_sheet_67x19s_5
+    21300000: monk_handshake_tilesheet_300x300_0
+    21300002: monk_handshake_tilesheet_300x300_1
+    21300004: monk_handshake_tilesheet_300x300_2
+    21300006: monk_handshake_tilesheet_300x300_3
+    21300008: monk_handshake_tilesheet_300x300_4
+    21300010: monk_handshake_tilesheet_300x300_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -96,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_0
+      name: monk_handshake_tilesheet_300x300_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,13 +110,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_1
+      name: monk_handshake_tilesheet_300x300_1
       rect:
         serializedVersion: 2
-        x: 67
+        x: 300
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,13 +124,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_2
+      name: monk_handshake_tilesheet_300x300_2
       rect:
         serializedVersion: 2
-        x: 134
+        x: 600
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,13 +138,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_3
+      name: monk_handshake_tilesheet_300x300_3
       rect:
         serializedVersion: 2
-        x: 201
+        x: 900
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,13 +152,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_4
+      name: monk_handshake_tilesheet_300x300_4
       rect:
         serializedVersion: 2
-        x: 268
+        x: 1202
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,13 +166,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_5
+      name: monk_handshake_tilesheet_300x300_5
       rect:
         serializedVersion: 2
-        x: 335
+        x: 1500
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

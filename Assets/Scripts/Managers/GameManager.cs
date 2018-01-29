@@ -47,7 +47,7 @@ public class GameManager : Manager<GameManager> {
     public TextMesh Answer4Text;
     public TextMesh QuestionDebug;
 
-    CreatureData currentCreature;
+    public CreatureData currentCreature;
     public GameObject currentCreatureObj { get; private set; }
     int currentCreaturePhase;
     int currentCreatureDialogue;
@@ -163,6 +163,7 @@ public class GameManager : Manager<GameManager> {
             CreatureResponseBox.SetActive(false);
             CreatureResponseText.text = "";
             CreatureDebug.text = currentCreature.name;
+            currentCreature.IntroSound.Play();
             currentCreatureObj = Instantiate(currentCreature.Prefab, CreaturePosition, Quaternion.identity);
             currentCreatureObj.transform.localScale = CreatureScaleInit;
             Tween.ScaleTo(currentCreatureObj, CreatureScaleFinal, 0.5f, Interpolate.EaseType.EaseOutQuad);

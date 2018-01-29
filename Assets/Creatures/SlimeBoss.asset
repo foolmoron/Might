@@ -13,7 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 2
   Name: Slime
-  Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
+  Prefab: {fileID: 1608579005847602, guid: dae3891c655bfc4478e7e94961077205, type: 2}
+  IntroSound: {fileID: 8300000, guid: 82174c2631dd5544194f7513f5585b60, type: 3}
+  AttackSound: {fileID: 8300000, guid: 4957ed7c21c5fe04299d419f90488783, type: 3}
   Pattern:
   - GoodAction: 1
     GoodReaction: The slime gets blasted back. He reforms slowly.

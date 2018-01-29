@@ -13,7 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 1
   Name: Wolf
-  Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
+  Prefab: {fileID: 1944020324336854, guid: 01b8fdd444d5f154aaec29b196caf169, type: 2}
+  IntroSound: {fileID: 8300000, guid: 3fa0374dfabe7f044822a45bd21b70c5, type: 3}
+  AttackSound: {fileID: 8300000, guid: 59874c72030fd9b4cbc1bee5d864a009, type: 3}
   Pattern:
   - GoodAction: 0
     GoodReaction: '*howls* The wolf did not like that.'

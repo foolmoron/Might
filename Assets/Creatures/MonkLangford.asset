@@ -14,6 +14,8 @@ MonoBehaviour:
   Difficulty: 2
   Name: Monk
   Prefab: {fileID: 1532985436887940, guid: 653834e74190001439af82d09c977391, type: 2}
+  IntroSound: {fileID: 8300000, guid: 2b1df97aaa19a2047bb0f0c0bed59cc2, type: 3}
+  AttackSound: {fileID: 8300000, guid: fc1985d33e4a8ad498639a02dba861ed, type: 3}
   Pattern:
   - GoodAction: 2
     GoodReaction: I won't hurt you.

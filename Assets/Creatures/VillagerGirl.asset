@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Name: VillagerGirl
   m_EditorClassIdentifier: 
   Difficulty: 0
-  Name: PeePee
-  Prefab: {fileID: 1849376855266732, guid: 887b858c1e113e541905dbd3ac77f789, type: 2}
+  Name: Lina
+  Prefab: {fileID: 1019366586026224, guid: 77debe765054b9f4780526578d3eda88, type: 2}
+  IntroSound: {fileID: 8300000, guid: b46a3eb282eed5d44b4ffc5f2f2d55d5, type: 3}
+  AttackSound: {fileID: 8300000, guid: bd1e0b83dc5545f49be236c7a30ba56f, type: 3}
   Pattern:
   - GoodAction: 2
     GoodReaction: You'll protect me? Yay

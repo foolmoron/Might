@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: 59177d982a3fc5d4ca61b0eacee13835
-timeCreated: 1517188624
+guid: 565778faacfce494b82ea797bf9b3afb
+timeCreated: 1517188553
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: smoke_puff_sheet_67x19s_0
-    21300002: smoke_puff_sheet_67x19s_1
-    21300004: smoke_puff_sheet_67x19s_2
-    21300006: smoke_puff_sheet_67x19s_3
-    21300008: smoke_puff_sheet_67x19s_4
-    21300010: smoke_puff_sheet_67x19s_5
+    21300000: dragon_sheet_400x300_0
+    21300002: dragon_sheet_400x300_1
+    21300004: dragon_sheet_400x300_2
+    21300006: dragon_sheet_400x300_3
+    21300008: dragon_sheet_400x300_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -52,7 +51,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -96,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_0
+      name: dragon_sheet_400x300_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 67
-        height: 19
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,13 +109,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_1
+      name: dragon_sheet_400x300_1
       rect:
         serializedVersion: 2
-        x: 67
+        x: 400
         y: 0
-        width: 67
-        height: 19
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,13 +123,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_2
+      name: dragon_sheet_400x300_2
       rect:
         serializedVersion: 2
-        x: 134
+        x: 800
         y: 0
-        width: 67
-        height: 19
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,13 +137,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_3
+      name: dragon_sheet_400x300_3
       rect:
         serializedVersion: 2
-        x: 201
+        x: 1200
         y: 0
-        width: 67
-        height: 19
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,27 +151,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_4
+      name: dragon_sheet_400x300_4
       rect:
         serializedVersion: 2
-        x: 268
+        x: 1600
         y: 0
-        width: 67
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_5
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 0
-        width: 67
-        height: 19
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

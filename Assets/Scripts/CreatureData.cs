@@ -35,6 +35,8 @@ public class CreatureData : ScriptableObject {
     public Difficulty Difficulty;
     public string Name;
     public GameObject Prefab;
+    public AudioClip IntroSound;
+    public AudioClip AttackSound;
     public List<CreaturePhase> Pattern;
     public List<Dialogue> Dialogues;
 }

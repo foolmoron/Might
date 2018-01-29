@@ -1,15 +1,13 @@
 fileFormatVersion: 2
-guid: 59177d982a3fc5d4ca61b0eacee13835
-timeCreated: 1517188624
+guid: 7723bcbb5296581429c37e604451117c
+timeCreated: 1517188367
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: smoke_puff_sheet_67x19s_0
-    21300002: smoke_puff_sheet_67x19s_1
-    21300004: smoke_puff_sheet_67x19s_2
-    21300006: smoke_puff_sheet_67x19s_3
-    21300008: smoke_puff_sheet_67x19s_4
-    21300010: smoke_puff_sheet_67x19s_5
+    21300000: mugger_flap_tilesheet_300x300_0
+    21300002: mugger_flap_tilesheet_300x300_1
+    21300004: mugger_flap_tilesheet_300x300_2
+    21300006: mugger_flap_tilesheet_300x300_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -52,7 +50,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -96,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_0
+      name: mugger_flap_tilesheet_300x300_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,13 +108,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_1
+      name: mugger_flap_tilesheet_300x300_1
       rect:
         serializedVersion: 2
-        x: 67
+        x: 300
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,13 +122,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_2
+      name: mugger_flap_tilesheet_300x300_2
       rect:
         serializedVersion: 2
-        x: 134
+        x: 600
         y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,41 +136,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_3
+      name: mugger_flap_tilesheet_300x300_3
       rect:
         serializedVersion: 2
-        x: 201
+        x: 900
         y: 0
-        width: 67
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_4
-      rect:
-        serializedVersion: 2
-        x: 268
-        y: 0
-        width: 67
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_5
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 0
-        width: 67
-        height: 19
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

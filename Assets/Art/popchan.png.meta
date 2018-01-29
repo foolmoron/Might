@@ -1,15 +1,16 @@
 fileFormatVersion: 2
-guid: 59177d982a3fc5d4ca61b0eacee13835
-timeCreated: 1517188624
+guid: 35abaf39b2e3fe34aaa122a88e006989
+timeCreated: 1517188452
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: smoke_puff_sheet_67x19s_0
-    21300002: smoke_puff_sheet_67x19s_1
-    21300004: smoke_puff_sheet_67x19s_2
-    21300006: smoke_puff_sheet_67x19s_3
-    21300008: smoke_puff_sheet_67x19s_4
-    21300010: smoke_puff_sheet_67x19s_5
+    21300000: popchan_0
+    21300002: popchan_1
+    21300004: popchan_2
+    21300006: popchan_3
+    21300008: popchan_4
+    21300010: popchan_5
+    21300012: popchan_6
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -52,7 +53,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -96,13 +97,69 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_0
+      name: popchan_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: popchan_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: popchan_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: popchan_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 150
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: popchan_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 67
-        height: 19
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,13 +167,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_1
+      name: popchan_5
       rect:
         serializedVersion: 2
-        x: 67
+        x: 150
         y: 0
-        width: 67
-        height: 19
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,55 +181,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_2
+      name: popchan_6
       rect:
         serializedVersion: 2
-        x: 134
+        x: 300
         y: 0
-        width: 67
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_3
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 0
-        width: 67
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_4
-      rect:
-        serializedVersion: 2
-        x: 268
-        y: 0
-        width: 67
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: smoke_puff_sheet_67x19s_5
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 0
-        width: 67
-        height: 19
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

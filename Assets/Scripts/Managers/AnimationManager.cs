@@ -95,6 +95,7 @@ public class AnimationManager : Manager<AnimationManager> {
                     ArmTalk.BaseTarget = ArmAct;
                     break;
             }
+            GameManager.Inst.currentCreature.AttackSound.Play();
             yield return new WaitForSeconds(0.8f);
             var prefab = ActionAnimPrefabs[choice];
             if (prefab) {
@@ -129,7 +130,7 @@ public class AnimationManager : Manager<AnimationManager> {
             } else {
                 NeutralSound.Play();
             }
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2.5f);
             GameManager.Inst.UpdateRPG();
             GameManager.Inst.CreatureResponseBox.SetActive(false);
             if (GameManager.Inst.creaturePatternDone) {
