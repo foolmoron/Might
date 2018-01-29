@@ -14,6 +14,8 @@ MonoBehaviour:
   Difficulty: 0
   Name: Sios
   Prefab: {fileID: 1151235781678052, guid: 596b3401d3b4d0d48a40cee5e5b9ee38, type: 2}
+  IntroSound: {fileID: 8300000, guid: 35e0ab38b98fc91499aa310e09522b24, type: 3}
+  AttackSound: {fileID: 8300000, guid: a83bb3f5cee94634c8a5be1ea9721fac, type: 3}
   Pattern:
   - GoodAction: 2
     GoodReaction: You don't want to die. That is very mortal.
