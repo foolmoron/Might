@@ -14,8 +14,8 @@ public class GameManager : Manager<GameManager> {
     public int ResponseLineLength = 23;
 
     [Header("RPG Stuff")]
-    public int HealthRPG = 10;
-    public Text HealthRPGText;
+    public int HealthRPG = 5;
+    public GameObject[] Hearts;
     public int GoldRPG;
     public Text GoldRPGText;
     public TextMesh CreatureNameText;
@@ -29,7 +29,8 @@ public class GameManager : Manager<GameManager> {
 
     [Header("Test Stuff")]
     public int ScoreTest;
-    public Text ScoreTestText;
+    public Image GradeImage;
+    public Sprite[] Grades;
     public TextMesh QuestionText;
     public TextMesh Answer1Text;
     public TextMesh Answer2Text;
@@ -41,6 +42,7 @@ public class GameManager : Manager<GameManager> {
     public GameObject currentCreatureObj { get; private set; }
     int currentCreaturePhase;
     int currentCreatureDialogue;
+    public int previousCreatureReaction { get; private set; }
     public bool creaturePatternDone { get { return currentCreaturePhase >= currentCreature.Pattern.Count; } }
     public bool creatureDialogueDone { get { return currentCreatureDialogue >= currentCreature.Dialogues.Count; } }
     QuestionData currentQuestion;
@@ -77,15 +79,18 @@ public class GameManager : Manager<GameManager> {
         }
         // do creature action
         var phase = currentCreature.Pattern[currentCreaturePhase];
+        previousCreatureReaction = 0;
         if (creatureAction == phase.GoodAction) {
             CreatureResponseText.text = phase.GoodReaction.LineWrap(ResponseLineLength);
             HealthRPG++;
             GoldRPG += phase.GoldOnGood;
             currentCreaturePhase++;
+            previousCreatureReaction = 1;
         } else if (creatureAction == phase.BadAction) {
             CreatureResponseText.text = phase.BadReaction.LineWrap(ResponseLineLength);
             HealthRPG--;
             currentCreaturePhase++;
+            previousCreatureReaction = -1;
         } else if (phase.UseBad2 && creatureAction == phase.BadAction2) {
             CreatureResponseText.text = phase.BadReaction2.LineWrap(ResponseLineLength);
             HealthRPG--;
@@ -105,6 +110,8 @@ public class GameManager : Manager<GameManager> {
             CreatureResponseText.text = phase.NeutralReaction.LineWrap(ResponseLineLength);
             currentCreaturePhase++;
         }
+        HealthRPG = Mathf.Clamp(HealthRPG, 0, Hearts.Length);
+        GoldRPG = Mathf.Max(GoldRPG, 0);
         // do question answers
         previousTestAnswerScore = currentQuestion.GetAnswer(questionAnswer).Score;
         ScoreTest += previousTestAnswerScore;
@@ -114,9 +121,21 @@ public class GameManager : Manager<GameManager> {
 
     public void NewRound() {
         // update texts
-        HealthRPGText.text = HealthRPG.ToString();
+        for (int i = 0; i < Hearts.Length; i++) {
+            Hearts[i].SetActive(i < HealthRPG);
+        }
         GoldRPGText.text = GoldRPG.ToString();
-        ScoreTestText.text = ScoreTest.ToString();
+        if (ScoreTest >= 8) { // A
+            GradeImage.sprite = Grades[0];
+        } else if (ScoreTest >= 4) { // B
+            GradeImage.sprite = Grades[1];
+        } else if (ScoreTest >= 0) { // C
+            GradeImage.sprite = Grades[2];
+        } else if (ScoreTest >= -4) { // D
+            GradeImage.sprite = Grades[3];
+        } else { // F
+            GradeImage.sprite = Grades[4];
+        }
         // set new creature
         if (currentCreature == null || creaturePatternDone) {
             currentCreature = AssetManager.Inst.Creatures.Next(currentCreature);
