@@ -117,7 +117,7 @@ public class AnimationManager : Manager<AnimationManager> {
             }
             TestArm.BaseTarget = TestArm.BaseTarget.withX(ScribblingX); // move test arm with RPG action
             ScribbleSound.Play();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.25f);
             if (GameManager.Inst.previousCreatureReaction == 1) {
                 GoodSound.Play();
             } else if (GameManager.Inst.previousCreatureReaction == -1) {
@@ -125,7 +125,7 @@ public class AnimationManager : Manager<AnimationManager> {
             } else {
                 NeutralSound.Play();
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
             GameManager.Inst.CreatureResponseBox.SetActive(false);
             if (GameManager.Inst.creaturePatternDone) {
                 GameManager.Inst.currentCreatureObj.GetComponent<FloatNear>().BaseTarget = GameManager.Inst.CreaturePositionFinal;

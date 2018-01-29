@@ -17089,7 +17089,12 @@ MonoBehaviour:
   CreatureScaleFinal: {x: 1, y: 1, z: 1}
   ScoreTest: 0
   GradeImage: {fileID: 1510755364}
-  Grades: []
+  Grades:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   QuestionText: {fileID: 2124028470}
   Answer1Text: {fileID: 519801621}
   Answer2Text: {fileID: 306778013}
@@ -18172,9 +18177,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4b004b82848805249a8cf7dbb1a7237a, type: 3}
   - {fileID: 8300000, guid: c4f56c56e63d8eb41b583a43dc911155, type: 3}
   - {fileID: 8300000, guid: 89010bff16293e346a65622c16399103, type: 3}
-  GoodSound: {fileID: 0}
-  BadSound: {fileID: 0}
-  NeutralSound: {fileID: 0}
+  GoodSound: {fileID: 8300000, guid: a0e27563fd5208744971c2b37c12641b, type: 3}
+  BadSound: {fileID: 8300000, guid: dd19e5db46abd8c4ba07e4868a7f92ab, type: 3}
+  NeutralSound: {fileID: 8300000, guid: 5e20a6c8869f23f4c9ec38d133af7baa, type: 3}
   TestArm: {fileID: 1709283839}
   TestArmResting:
   - {x: 5.85, y: -0.6}
@@ -18184,7 +18189,7 @@ MonoBehaviour:
   ScribblingX: 3
   CorrectParticles: {fileID: 1365470294}
   WrongParticles: {fileID: 52200803}
-  TestCorrect: {fileID: 0}
+  TestCorrect: {fileID: 8300000, guid: a0e27563fd5208744971c2b37c12641b, type: 3}
   TestWrong: {fileID: 8300000, guid: dd19e5db46abd8c4ba07e4868a7f92ab, type: 3}
   ScribbleSound: {fileID: 8300000, guid: a13d29170e547c44ea18fcb2167ef85e, type: 3}
 --- !u!1 &1926642074
