@@ -19,7 +19,7 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 0
     GoodReaction: "\u256D\u2229\u256E(o.o)\u256D\u2229\u256E"
-    GoldOnGood: 0
+    GoldOnGood: 150
     BadAction: 2
     BadReaction: "\u256D\u2229\u256E[>_<]\u256D\u2229\u256E"
     UseBad2: 0

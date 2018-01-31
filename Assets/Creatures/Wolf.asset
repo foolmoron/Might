@@ -19,7 +19,7 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 0
     GoodReaction: '*howls* The wolf did not like that.'
-    GoldOnGood: 0
+    GoldOnGood: 25
     BadAction: 1
     BadReaction: The wolf seems unharmed, and bites your leg.
     UseBad2: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
   - GoodAction: 0
     GoodReaction: You slash the wolf in the throat. It chokes on its blood, but runs
       off.
-    GoldOnGood: 0
+    GoldOnGood: 25
     BadAction: 1
     BadReaction: It still isn't hurting him! The wolf bites your leg another time.
     UseBad2: 0

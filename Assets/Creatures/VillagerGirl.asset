@@ -42,3 +42,6 @@ MonoBehaviour:
   - Text: Hey, mister, could you help me find my parents?
     HealthChange: 1
     GoldChange: 50
+  - Text: Oooooh shinyyy!
+    HealthChange: 0
+    GoldChange: -50

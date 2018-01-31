@@ -19,7 +19,7 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 0
     GoodReaction: Hey that hurt!
-    GoldOnGood: 0
+    GoldOnGood: 20
     BadAction: 1
     BadReaction: My royal necklace protects me from magic!
     UseBad2: 0

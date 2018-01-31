@@ -19,7 +19,7 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 2
     GoodReaction: You don't want to die. That is very mortal.
-    GoldOnGood: 0
+    GoldOnGood: 40
     BadAction: 0
     BadReaction: I could squish you.
     UseBad2: 0

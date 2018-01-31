@@ -19,7 +19,7 @@ MonoBehaviour:
   Pattern:
   - GoodAction: 2
     GoodReaction: I won't hurt you.
-    GoldOnGood: 0
+    GoldOnGood: 20
     BadAction: 0
     BadReaction: You have one warning.
     UseBad2: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     NeutralReaction: You're peculiar. May god be with you.
   - GoodAction: 2
     GoodReaction: I'll leave you alone now.
-    GoldOnGood: 0
+    GoldOnGood: 20
     BadAction: 0
     BadReaction: BEGONE EVIL SPIRITS!
     UseBad2: 0
