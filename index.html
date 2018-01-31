@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Might: Pen & Sword</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webgl.json", {
+        Module: {
+          onRuntimeInitialized: function() { setTimeout(resize, 100) },
+        },
+      });
+    </script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            background: black;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0; 
+            overflow: hidden;
+            background: none !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #gameContainer {
+            background: none !important;
+        }
+    </style>
+      <script>
+        function debounce(func, time, context) {
+            var timeoutId;
+            return function() {
+                clearTimeout(timeoutId);
+                var args = arguments;
+                timeoutId = setTimeout(function() { func.apply(context, args); }, time);
+            }
+        }
+        var ASPECT_RATIO = 1280/720;
+        function resize() {
+            var container = document.querySelector('#gameContainer');
+            var canvas = document.querySelector('canvas');
+            if (container && canvas) {
+                var w, h;
+                if (window.innerWidth < (window.innerHeight * ASPECT_RATIO)) {
+                    w = window.innerWidth;
+                    h = window.innerWidth / ASPECT_RATIO;
+                } else {
+                    w = window.innerHeight * ASPECT_RATIO;
+                    h = window.innerHeight;
+                }
+                container.style.width = w + 'px';
+                container.style.height = h + 'px';
+                canvas.width = w;
+                canvas.height = h;
+            }
+        }
+        window.addEventListener('resize', debounce(resize, 100));
+      </script>
+  </head>
+  <body>
+    <div id="gameContainer" style="width: 1280px; height: 720px; margin: auto"></div>
+  </body>
+</html>

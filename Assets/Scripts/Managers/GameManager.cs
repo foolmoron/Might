@@ -45,6 +45,7 @@ public class GameManager : Manager<GameManager> {
     public TextMesh Answer2Text;
     public TextMesh Answer3Text;
     public TextMesh Answer4Text;
+    public TextMesh NumberText;
     public TextMesh QuestionDebug;
 
     public CreatureData currentCreature;
@@ -179,6 +180,7 @@ public class GameManager : Manager<GameManager> {
         Answer2Text.text = currentQuestion.GetAnswer(questionOrder[1]).Text.LineWrap(AnswerLineLength);
         Answer3Text.text = currentQuestion.GetAnswer(questionOrder[2]).Text.LineWrap(AnswerLineLength);
         Answer4Text.text = currentQuestion.GetAnswer(questionOrder[3]).Text.LineWrap(AnswerLineLength);
+        NumberText.text = "Question " + (questionsAnswered + 1) + "/" + QuestionsBeforeWin;
         QuestionDebug.text = currentQuestion.name;
     }
 }
